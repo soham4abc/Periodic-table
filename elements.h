@@ -552,7 +552,7 @@ extern void table()
     atom[107].atomicnum = 108;
     atom[107].atomicwt = 277.00;
 
-    strcpy(atom[108].name, "Meinerium");
+    strcpy(atom[108].name, "MEINERIUM");
     strcpy(atom[108].symbol, "Mt");
     atom[108].atomicnum = 109;
     atom[108].atomicwt = 268.00;
