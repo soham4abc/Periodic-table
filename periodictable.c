@@ -53,6 +53,11 @@ void info1() {
 	char ele[20];
 	printf("\033[32mENTER THE ELEMENT'S NAME : \033[0m");
 	scanf("%s",ele);
+	for (i = 0; ele[i]!='\0'; i++) {
+      if(ele[i] >= 'a' && ele[i] <= 'z') {
+         ele[i] = ele[i] -32;
+      }
+   }
 	for (i=0; i<118; i++) {
 		if (strcmp(atom[i].name,ele)==0){
 			printf("\033[34m\n\n\tELEMENT : %s\033[0m\n",atom[i].name);
