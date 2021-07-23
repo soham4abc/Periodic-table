@@ -78,9 +78,9 @@ void info2() {
 			printf("\033[34m\n\n\tATOMIC WEIGHT : %f\033[0m\n",atom[i].atomicwt);
 			break;
 		}
-		else 
-		printf("\033[32m \nELEMENT DOES NOT EXIST! GO READ CHEMISTRY! \033[0m");
-		break;
+		//else 
+		//printf("\033[34m\n\n\tELEMENT : %s\033[0m\n",atom[i].name);
+		
 
 	}
 	again();
