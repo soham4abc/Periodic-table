@@ -72,9 +72,8 @@ void quit()
     }
     else if (tolower(response) == 'n')
     {
-        HomeScreen();
+        main();
     }
-
     else
     {
         quit();
@@ -238,7 +237,7 @@ int main()
         search();
         break;
     case '2':
-        printf("2");
+        quit();
         break;
     default:
         main();
