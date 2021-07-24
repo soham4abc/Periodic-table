@@ -106,6 +106,11 @@ void search_by_name()
     bool find = false;
     printf("%sEnter the Element's Name : %s", red_bold, clear_colour);
     scanf("%s", element_name);
+    element_name[0] = toupper(element_name[0]);
+    for (i = 1; element_name[i] != '\0'; i++)
+    {
+        element_name[i] = towlower(element_name[i]);
+    }
     for (i = 0; i < 118; i++)
     {
         if (strcmp(atom[i].name, element_name) == 0)
@@ -129,6 +134,11 @@ void search_by_symbol()
     bool find = false;
     printf("%sEnter the Element's Symbol : %s", red_bold, clear_colour);
     scanf("%s", element_symbol);
+    element_symbol[0] = toupper(element_symbol[0]);
+    for (i = 1; element_symbol[i] != '\0'; i++)
+    {
+        element_symbol[i] = towlower(element_symbol[i]);
+    }
     for (i = 0; i < 118; i++)
     {
         if (strcmp(atom[i].symbol, element_symbol) == 0)
