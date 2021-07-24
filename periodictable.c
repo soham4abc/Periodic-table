@@ -53,12 +53,12 @@ void Result(int index)
 {
     ClearScreen();
     printf("                                   \033[31;1;51;4mPERIODIC TABLE\033[0m\n\n");
-    printf("%sElement : %s%s\n", red_bold, atom[index].name, clear_colour);
-    printf("%sSymbol : %s%s\n", red_bold, atom[index].symbol, clear_colour);
-    printf("%sAtomic Number : %d%s\n", red_bold, atom[index].atomicnum, clear_colour);
-    printf("%sAtomic Weight : %g g/mol%s\n", red_bold, atom[index].atomicwt, clear_colour);
-    printf("%sDensity : %f g/cm^3%s\n", red_bold, atom[index].density, clear_colour);
-    printf("%sElectronic Configuration : %s%s\n", red_bold, atom[index].configuration, clear_colour);
+    printf("%sElement :%s %s%s%s\n", green_bold,clear_colour, blue_bold, atom[index].name, clear_colour);
+    printf("%sSymbol :%s %s%s%s\n",yellow_bold,clear_colour, red_bold, atom[index].symbol, clear_colour);
+    printf("%sAtomic Number :%s %s%d%s\n", blue_bold,clear_colour, green_bold,atom[index].atomicnum, clear_colour);
+    printf("%sAtomic Weight :%s %s%g%s %sg/mol%s\n", red_bold,clear_colour, yellow_bold, atom[index].atomicwt, clear_colour,white_bold,clear_colour);
+    printf("%sDensity :%s %s%f%s %sg/cm^3%s\n", green_bold,clear_colour, purple_bold, atom[index].density, clear_colour,white_bold,clear_colour);
+    printf("%sElectronic Configuration :%s %s%s%s\n", yellow_bold,clear_colour, cyan_bold, atom[index].configuration, clear_colour);
 }
 
 void quit()
