@@ -61,6 +61,8 @@ void Result(int index)
     printf("%sElement :%s %s%s%s\n", green_bold, clear_colour, blue_bold, atom[index].name, clear_colour);
     printf("%sSymbol :%s %s%s%s\n", yellow_bold, clear_colour, red_bold, atom[index].symbol, clear_colour);
     printf("%sAtomic Number :%s %s%d%s\n", blue_bold, clear_colour, green_bold, atom[index].atomicnum, clear_colour);
+    printf("%sGroup Number :%s %s%s (%s)%s\n", green_bold, clear_colour, blue_bold, atom[index].group,atom[index].intgroup,clear_colour);
+    printf("%sPeriod Number :%s %s%d%s\n", yellow_bold, clear_colour, red_bold, atom[index].period, clear_colour);
     printf("%sAtomic Weight :%s %s%g%s %sg/mol%s\n", red_bold, clear_colour, yellow_bold, atom[index].atomicwt, clear_colour, white_bold, clear_colour);
     printf("%sDensity :%s %s%f%s %sg/cm^3%s\n", green_bold, clear_colour, purple_bold, atom[index].density, clear_colour, white_bold, clear_colour);
     printf("%sElectronic Configuration :%s %s%s%s\n", yellow_bold, clear_colour, cyan_bold, atom[index].configuration, clear_colour);
@@ -268,6 +270,40 @@ void search_by_atomicweight()
     again();
 }
 
+
+void search_by_groupandperiod()
+{
+    HomeScreen();
+    char element_group[5];
+    int element_period;
+    bool find = false;
+    printf("%sEnter the Group No. (e.g. IB/11): %s", red_bold, clear_colour);
+    scanf("%s", element_group);
+    printf("\n%sEnter the Period No. : %s", red_bold, clear_colour);
+    scanf("%d", &element_period);
+    for (i = 0; element_group[i] != '\0'; i++)
+    {
+        element_group[i] = toupper(element_group[i]);
+    }
+    for (i = 0; i < 118; i++)
+    {
+        if ((strcmp(atom[i].intgroup, element_group) == 0) || (strcmp(atom[i].group, element_group) == 0))
+        {
+            if (atom[i].period == element_period)
+            {
+                find = true;
+                Result(i);
+                break;
+            }
+        }
+    }
+    if (find == false)
+    {
+        printf("%sWrong Entry%s\n", red_bold, clear_colour);
+    }
+    again();
+}
+
 void search()
 {
     HomeScreen();
@@ -275,12 +311,17 @@ void search()
     printf("%s   < 1 > Element Name%s\n", blue_bold, clear_colour);
     printf("%s   < 2 > Symbol%s\n", blue_bold, clear_colour);
     printf("%s   < 3 > Atomic Number%s\n", blue_bold, clear_colour);
-    printf("%s   < 4 > Atomic Weight%s\n\n", blue_bold, clear_colour);
+    printf("%s   < 4 > Atomic Weight%s\n", blue_bold, clear_colour);
+    printf("%s   < 5 > Group & Period No.%s\n\n", blue_bold, clear_colour);
+    printf("%sPress < 0 > to return back to main menu.%s\n\n", red_bold, clear_colour);
     printf("%sYour Choice : %s", yellow_bold, clear_colour);
     char response_Search = getch();
 
     switch (response_Search)
     {
+    case '0':
+        main();
+        break;
     case '1':
         search_by_name();
         break;
@@ -292,6 +333,9 @@ void search()
         break;
     case '4':
         search_by_atomicweight();
+        break;
+    case '5':
+        search_by_groupandperiod();
         break;
     default:
         search();
