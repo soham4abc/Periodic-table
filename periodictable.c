@@ -133,12 +133,7 @@ void search_by_symbol()
     char element_symbol[20];
     bool find = false;
     printf("%sEnter the Element's Symbol : %s", red_bold, clear_colour);
-    scanf("%s", element_symbol);
-    element_symbol[0] = toupper(element_symbol[0]);
-    for (i = 1; element_symbol[i] != '\0'; i++)
-    {
-        element_symbol[i] = towlower(element_symbol[i]);
-    }
+    scanf("%s", element_symbol);    
     for (i = 0; i < 118; i++)
     {
         if (strcmp(atom[i].symbol, element_symbol) == 0)
