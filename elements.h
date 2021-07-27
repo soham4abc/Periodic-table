@@ -18,7 +18,10 @@ struct element
     char group[5];
     char intgroup[2];
     int period;
+    
     int atomicradius;
+    float meltingpoint;
+    float boilingpoint;
     float electronegativity;
     float electronaffinity;
 
@@ -36,6 +39,11 @@ extern void table()
     strcpy(atom[0].group, "IA");
     strcpy(atom[0].intgroup, "1");
     atom[0].period = 1;
+    atom[0].atomicradius = 53;
+    atom[0].meltingpoint = 14.01;
+    atom[0].boilingpoint = 20.25;
+    atom[0].electronegativity = 2.2;
+    atom[0].electronaffinity = 72.8;
 
     strcpy(atom[1].name, "Helium");
     strcpy(atom[1].symbol, "He");
@@ -47,6 +55,11 @@ extern void table()
     strcpy(atom[1].group, "VIIIA");
     strcpy(atom[1].intgroup, "18");
     atom[1].period = 1;
+    atom[1].atomicradius = 31;
+    atom[1].meltingpoint = 0.95;
+    atom[1].boilingpoint = 4.25;
+    atom[1].electronegativity = 0;
+    atom[1].electronaffinity = 0;
 
     strcpy(atom[2].name, "Lithium");
     strcpy(atom[2].symbol, "Li");
@@ -57,7 +70,12 @@ extern void table()
     strcpy(atom[2].colourbox, "\033[0;30;41m3      6.941\033[0m\n\033[0;30;41m     Li     \033[0m\n\033[0;30;41mLithium     \033[0m\n");
     strcpy(atom[2].group, "IA");
     strcpy(atom[2].intgroup, "1");
-    atom[2].period = 2;
+    atom[2].period = 145;
+    atom[2].atomicradius = 145;
+    atom[2].meltingpoint = 453.65;
+    atom[2].boilingpoint = 1615.15;
+    atom[2].electronegativity = 0.98;
+    atom[2].electronaffinity = 59.6;
 
     strcpy(atom[3].name, "Beryllium");
     strcpy(atom[3].symbol, "Be");
@@ -69,6 +87,11 @@ extern void table()
     strcpy(atom[3].group, "IIA");
     strcpy(atom[3].intgroup, "2");
     atom[3].period = 2;
+    atom[3].atomicradius = 112;
+    atom[3].meltingpoint = 1551.15;
+    atom[3].boilingpoint = 3243.15;
+    atom[3].electronegativity = 1.57;
+    atom[3].electronaffinity = 0;
 
     strcpy(atom[4].name, "Boron");
     strcpy(atom[4].symbol, "B");
@@ -80,6 +103,11 @@ extern void table()
     strcpy(atom[4].group, "IIIA");
     strcpy(atom[4].intgroup, "13");
     atom[4].period = 2;
+    atom[4].atomicradius = 98;
+    atom[4].meltingpoint = 2348.95;
+    atom[4].boilingpoint = 4199.95;
+    atom[4].electronegativity = 2.04;
+    atom[4].electronaffinity = 26.7;
 
     strcpy(atom[5].name, "Carbon");
     strcpy(atom[5].symbol, "C");
@@ -91,6 +119,11 @@ extern void table()
     strcpy(atom[5].group, "IVA");
     strcpy(atom[5].intgroup, "14");
     atom[5].period = 2;
+    atom[5].atomicradius = 77;
+    atom[5].meltingpoint = 3823.15;
+    atom[5].boilingpoint = 5100.15;
+    atom[5].electronegativity = 2.55;
+    atom[5].electronaffinity = 153.9;
 
     strcpy(atom[6].name, "Nitrogen");
     strcpy(atom[6].symbol, "N");
@@ -102,6 +135,11 @@ extern void table()
     strcpy(atom[6].group, "VA");
     strcpy(atom[6].intgroup, "15");
     atom[6].period = 2;
+    atom[6].atomicradius = 92;
+    atom[6].meltingpoint = 63.25;
+    atom[6].boilingpoint = 77.35;
+    atom[6].electronegativity = 3.04;
+    atom[6].electronaffinity = 7;
 
     strcpy(atom[7].name, "Oxygen");
     strcpy(atom[7].symbol, "O");
@@ -113,6 +151,11 @@ extern void table()
     strcpy(atom[7].group, "VIA");
     strcpy(atom[7].intgroup, "16");
     atom[7].period = 2;
+    atom[7].atomicradius = 48;
+    atom[7].meltingpoint = 54.36;
+    atom[7].boilingpoint = 90.19;
+    atom[7].electronegativity = 3.44;
+    atom[7].electronaffinity = 141;
 
     strcpy(atom[8].name, "Fluorine");
     strcpy(atom[8].symbol, "F");
@@ -124,6 +167,11 @@ extern void table()
     strcpy(atom[8].group, "VIIA");
     strcpy(atom[8].intgroup, "17");
     atom[8].period = 2;
+    atom[8].atomicradius = 73;
+    atom[8].meltingpoint = 53.48;
+    atom[8].boilingpoint = 85.04;
+    atom[8].electronegativity = 3.98;
+    atom[8].electronaffinity = 328;
 
     strcpy(atom[9].name, "Neon");
     strcpy(atom[9].symbol, "Ne");
@@ -135,6 +183,11 @@ extern void table()
     strcpy(atom[9].group, "VIIIA");
     strcpy(atom[9].intgroup, "18");
     atom[9].period = 2;
+    atom[9].atomicradius = 38;
+    atom[9].meltingpoint = 24.48;
+    atom[9].boilingpoint = 27.1;
+    atom[9].electronegativity = 0;
+    atom[9].electronaffinity = 0;
 
     strcpy(atom[10].name, "Sodium");
     strcpy(atom[10].symbol, "Na");
@@ -146,6 +199,11 @@ extern void table()
     strcpy(atom[10].group, "IA");
     strcpy(atom[10].intgroup, "1");
     atom[10].period = 3;
+    atom[10].atomicradius = 190;
+    atom[10].meltingpoint = 370.95;
+    atom[10].boilingpoint = 1156.09;
+    atom[10].electronegativity = 0.93;
+    atom[10].electronaffinity = 52.8;
 
     strcpy(atom[11].name, "Magnesium");
     strcpy(atom[11].symbol, "Mg");
@@ -157,6 +215,11 @@ extern void table()
     strcpy(atom[11].group, "IIA");
     strcpy(atom[11].intgroup, "2");
     atom[11].period = 3;
+    atom[11].atomicradius = 160;
+    atom[11].meltingpoint = 923.15;
+    atom[11].boilingpoint = 1363.15;
+    atom[11].electronegativity = 1.31;
+    atom[11].electronaffinity = 0;
 
     strcpy(atom[12].name, "Aluminium");
     strcpy(atom[12].symbol, "Al");
@@ -168,6 +231,11 @@ extern void table()
     strcpy(atom[12].group, "IIIA");
     strcpy(atom[12].intgroup, "13");
     atom[12].period = 3;
+    atom[12].atomicradius = 143;
+    atom[12].meltingpoint = 933.15;
+    atom[12].boilingpoint = 2791.97;
+    atom[12].electronegativity = 1.61;
+    atom[12].electronaffinity = 42.5;
 
     strcpy(atom[13].name, "Silicon");
     strcpy(atom[13].symbol, "Si");
@@ -179,6 +247,11 @@ extern void table()
     strcpy(atom[13].group, "IVA");
     strcpy(atom[13].intgroup, "14");
     atom[13].period = 3;
+    atom[13].atomicradius = 132;
+    atom[13].meltingpoint = 1688.0;
+    atom[13].boilingpoint = 3538.15;
+    atom[13].electronegativity = 1.9;
+    atom[13].electronaffinity = 133.6;
 
     strcpy(atom[14].name, "Phosphorus");
     strcpy(atom[14].symbol, "P");
@@ -190,6 +263,11 @@ extern void table()
     strcpy(atom[14].group, "VA");
     strcpy(atom[14].intgroup, "15");
     atom[14].period = 3;
+    atom[14].atomicradius = 128;
+    atom[14].meltingpoint = 317.3;
+    atom[14].boilingpoint = 553.65;
+    atom[14].electronegativity = 2.19;
+    atom[14].electronaffinity = 72;
 
     strcpy(atom[15].name, "Sulphur");
     strcpy(atom[15].symbol, "S");
@@ -201,6 +279,11 @@ extern void table()
     strcpy(atom[15].group, "VIA");
     strcpy(atom[15].intgroup, "16");
     atom[15].period = 3;
+    atom[15].atomicradius = 127;
+    atom[15].meltingpoint = 385.95;
+    atom[15].boilingpoint = 717.82;
+    atom[15].electronegativity = 2.58;
+    atom[15].electronaffinity = 200;
 
     strcpy(atom[16].name, "Chlorine");
     strcpy(atom[16].symbol, "Cl");
@@ -212,6 +295,11 @@ extern void table()
     strcpy(atom[16].group, "VIIA");
     strcpy(atom[16].intgroup, "17");
     atom[16].period = 3;
+    atom[16].atomicradius = 99;
+    atom[16].meltingpoint = 172.17;
+    atom[16].boilingpoint = 238.55;
+    atom[16].electronegativity = 3.16;
+    atom[16].electronaffinity = 349;
 
     strcpy(atom[17].name, "Argon");
     strcpy(atom[17].symbol, "Ar");
@@ -223,6 +311,11 @@ extern void table()
     strcpy(atom[17].group, "VIIIA");
     strcpy(atom[17].intgroup, "18");
     atom[17].period = 3;
+    atom[17].atomicradius = 71;
+    atom[17].meltingpoint = 83.81;
+    atom[17].boilingpoint = 87.3;
+    atom[17].electronegativity = 0;
+    atom[17].electronaffinity = 0;
 
     strcpy(atom[18].name, "Potassium");
     strcpy(atom[18].symbol, "K");
@@ -234,6 +327,11 @@ extern void table()
     strcpy(atom[18].group, "IA");
     strcpy(atom[18].intgroup, "1");
     atom[18].period = 4;
+    atom[18].atomicradius = 235;
+    atom[18].meltingpoint = 336.53;
+    atom[18].boilingpoint = 1031.95;
+    atom[18].electronegativity = 0.82;
+    atom[18].electronaffinity = 48.4;
 
     strcpy(atom[19].name, "Calcium");
     strcpy(atom[19].symbol, "Ca");
@@ -245,6 +343,11 @@ extern void table()
     strcpy(atom[19].group, "IIA");
     strcpy(atom[19].intgroup, "2");
     atom[19].period = 4;
+    atom[19].atomicradius = 197;
+    atom[19].meltingpoint = 1115.15;
+    atom[19].boilingpoint = 1757.15;
+    atom[19].electronegativity = 1;
+    atom[19].electronaffinity = 2.37;
 
     strcpy(atom[20].name, "Scandium");
     strcpy(atom[20].symbol, "Sc");
@@ -256,6 +359,11 @@ extern void table()
     strcpy(atom[20].group, "IIIB");
     strcpy(atom[20].intgroup, "3");
     atom[20].period = 4;
+    atom[20].atomicradius = 162;
+    atom[20].meltingpoint = 1814.15;
+    atom[20].boilingpoint = 3109.15;
+    atom[20].electronegativity = 1.36;
+    atom[20].electronaffinity = 18.1;
 
     strcpy(atom[21].name, "Titanium");
     strcpy(atom[21].symbol, "Ti");
@@ -267,6 +375,11 @@ extern void table()
     strcpy(atom[21].group, "IVB");
     strcpy(atom[21].intgroup, "4");
     atom[21].period = 4;
+    atom[21].atomicradius = 147;
+    atom[21].meltingpoint = 1933.15;
+    atom[21].boilingpoint = 3560.15;
+    atom[21].electronegativity = 1.54;
+    atom[21].electronaffinity = 7.6;
 
     strcpy(atom[22].name, "Vanadium");
     strcpy(atom[22].symbol, "V");
@@ -278,6 +391,11 @@ extern void table()
     strcpy(atom[22].group, "VB");
     strcpy(atom[22].intgroup, "5");
     atom[22].period = 4;
+    atom[22].atomicradius = 134;
+    atom[22].meltingpoint = 2183.15;
+    atom[22].boilingpoint = 3680.15;
+    atom[22].electronegativity = 1.63;
+    atom[22].electronaffinity = 50.6;
 
     strcpy(atom[23].name, "Chromium");
     strcpy(atom[23].symbol, "Cr");
@@ -289,9 +407,14 @@ extern void table()
     strcpy(atom[23].group, "VIB");
     strcpy(atom[23].intgroup, "6");
     atom[23].period = 4;
+    atom[23].atomicradius = 130;
+    atom[23].meltingpoint = 2180.15;
+    atom[23].boilingpoint = 2945.15;
+    atom[23].electronegativity = 1.66;
+    atom[23].electronaffinity = 64.3;
 
     strcpy(atom[24].name, "Manganese");
-    strcpy(atom[24].symbol, "Mg");
+    strcpy(atom[24].symbol, "Mn");
     atom[24].atomicnum = 25;
     atom[24].atomicwt = 54.9380;
     strcpy(atom[24].configuration, "1s2 2s2 2p6 3s2 3p6 4s2 3d5");
@@ -300,6 +423,11 @@ extern void table()
     strcpy(atom[24].group, "VIIB");
     strcpy(atom[24].intgroup, "7");
     atom[24].period = 4;
+    atom[24].atomicradius = 127;
+    atom[24].meltingpoint = 1518.15;
+    atom[24].boilingpoint = 2334.15;
+    atom[24].electronegativity = 1.55;
+    atom[24].electronaffinity = 0;
 
     strcpy(atom[25].name, "Iron");
     strcpy(atom[25].symbol, "Fe");
@@ -311,6 +439,11 @@ extern void table()
     strcpy(atom[25].group, "VIIIB");
     strcpy(atom[25].intgroup, "8");
     atom[25].period = 4;
+    atom[25].atomicradius = 126;
+    atom[25].meltingpoint = 1812.15;
+    atom[25].boilingpoint = 3135.15;
+    atom[25].electronegativity = 1.83;
+    atom[25].electronaffinity = 15.7;
 
     strcpy(atom[26].name, "Cobalt");
     strcpy(atom[26].symbol, "Co");
@@ -322,6 +455,11 @@ extern void table()
     strcpy(atom[26].group, "VIIIB");
     strcpy(atom[26].intgroup, "9");
     atom[26].period = 4;
+    atom[26].atomicradius = 125;
+    atom[26].meltingpoint = 1766.15;
+    atom[26].boilingpoint = 3143.15;
+    atom[26].electronegativity = 1.88;
+    atom[26].electronaffinity = 63.7;
 
     strcpy(atom[27].name, "Nickel");
     strcpy(atom[27].symbol, "Ni");
@@ -333,6 +471,11 @@ extern void table()
     strcpy(atom[27].group, "VIIIB");
     strcpy(atom[27].intgroup, "10");
     atom[27].period = 4;
+    atom[27].atomicradius = 124;
+    atom[27].meltingpoint = 1728.15;
+    atom[27].boilingpoint = 3188.15;
+    atom[27].electronegativity = 1.91;
+    atom[27].electronaffinity = 112;
 
     strcpy(atom[28].name, "Copper");
     strcpy(atom[28].symbol, "Cu");
@@ -344,6 +487,11 @@ extern void table()
     strcpy(atom[28].group, "IB");
     strcpy(atom[28].intgroup, "11");
     atom[28].period = 4;
+    atom[28].atomicradius = 128;
+    atom[28].meltingpoint = 1357.77;
+    atom[28].boilingpoint = 2835.15;
+    atom[28].electronegativity = 1.9;
+    atom[28].electronaffinity = 118.4;
 
     strcpy(atom[29].name, "Zinc");
     strcpy(atom[29].symbol, "Zn");
@@ -355,6 +503,11 @@ extern void table()
     strcpy(atom[29].group, "IIB");
     strcpy(atom[29].intgroup, "12");
     atom[29].period = 4;
+    atom[29].atomicradius = 138;
+    atom[29].meltingpoint = 692.65;
+    atom[29].boilingpoint = 1179.15;
+    atom[29].electronegativity = 1.65;
+    atom[29].electronaffinity = 0;
 
     strcpy(atom[30].name, "Gallium");
     strcpy(atom[30].symbol, "Ga");
@@ -366,6 +519,11 @@ extern void table()
     strcpy(atom[30].group, "IIIA");
     strcpy(atom[30].intgroup, "13");
     atom[30].period = 4;
+    atom[30].atomicradius = 141;
+    atom[30].meltingpoint = 302.95;
+    atom[30].boilingpoint = 2476.15;
+    atom[30].electronegativity = 1.81;
+    atom[30].electronaffinity = 28.9;
 
     strcpy(atom[31].name, "Germanium");
     strcpy(atom[31].symbol, "Ge");
@@ -377,6 +535,11 @@ extern void table()
     strcpy(atom[31].group, "IVA");
     strcpy(atom[31].intgroup, "14");
     atom[31].period = 4;
+    atom[31].atomicradius = 122.5;
+    atom[31].meltingpoint = 1210.65;
+    atom[31].boilingpoint = 3106.15;
+    atom[31].electronegativity = 2.01;
+    atom[31].electronaffinity = 119;
 
     strcpy(atom[32].name, "Arsenic");
     strcpy(atom[32].symbol, "As");
@@ -388,6 +551,11 @@ extern void table()
     strcpy(atom[32].group, "VA");
     strcpy(atom[32].intgroup, "15");
     atom[32].period = 4;
+    atom[32].atomicradius = 139;
+    atom[32].meltingpoint = 0;
+    atom[32].boilingpoint = 886.15;
+    atom[32].electronegativity = 2.18;
+    atom[32].electronaffinity = 78;
 
     strcpy(atom[33].name, "Selenium");
     strcpy(atom[33].symbol, "Se");
@@ -399,6 +567,11 @@ extern void table()
     strcpy(atom[33].group, "VIA");
     strcpy(atom[33].intgroup, "16");
     atom[33].period = 4;
+    atom[33].atomicradius = 140;
+    atom[33].meltingpoint = 490.15;
+    atom[33].boilingpoint = 957.95;
+    atom[33].electronegativity = 2.55;
+    atom[33].electronaffinity = 195;
 
     strcpy(atom[34].name, "Bromine");
     strcpy(atom[34].symbol, "Br");
@@ -410,6 +583,11 @@ extern void table()
     strcpy(atom[34].group, "VIIA");
     strcpy(atom[34].intgroup, "17");
     atom[34].period = 4;
+    atom[34].atomicradius = 115;
+    atom[34].meltingpoint = 265.9;
+    atom[34].boilingpoint = 331.95;
+    atom[34].electronegativity = 2.96;
+    atom[34].electronaffinity = 324.6;
 
     strcpy(atom[35].name, "Krypton");
     strcpy(atom[35].symbol, "Kr");
@@ -421,6 +599,11 @@ extern void table()
     strcpy(atom[35].group, "VIIIA");
     strcpy(atom[35].intgroup, "18");
     atom[35].period = 4;
+    atom[35].atomicradius = 88;
+    atom[35].meltingpoint = 115.78;
+    atom[35].boilingpoint = 119.75;
+    atom[35].electronegativity = 3;
+    atom[35].electronaffinity = 0;
 
     strcpy(atom[36].name, "Rubidium");
     strcpy(atom[36].symbol, "Rb");
@@ -432,6 +615,11 @@ extern void table()
     strcpy(atom[36].group, "IA");
     strcpy(atom[36].intgroup, "1");
     atom[36].period = 5;
+    atom[36].atomicradius = 248;
+    atom[36].meltingpoint = 312.47;
+    atom[36].boilingpoint = 960.35;
+    atom[36].electronegativity = 0.82;
+    atom[36].electronaffinity = 46.9;
 
     strcpy(atom[37].name, "Strontium");
     strcpy(atom[37].symbol, "Sr");
@@ -443,6 +631,11 @@ extern void table()
     strcpy(atom[37].group, "IIA");
     strcpy(atom[37].intgroup, "2");
     atom[37].period = 5;
+    atom[37].atomicradius = 215;
+    atom[37].meltingpoint = 1050.15;
+    atom[37].boilingpoint = 1655.15;
+    atom[37].electronegativity = 0.95;
+    atom[37].electronaffinity = 5.03;
 
     strcpy(atom[38].name, "Yttrium");
     strcpy(atom[38].symbol, "Y");
@@ -454,6 +647,11 @@ extern void table()
     strcpy(atom[38].group, "IIIB");
     strcpy(atom[38].intgroup, "3");
     atom[38].period = 5;
+    atom[38].atomicradius = 178;
+    atom[38].meltingpoint = 1799.15;
+    atom[38].boilingpoint = 3611.15;
+    atom[38].electronegativity = 1.22;
+    atom[38].electronaffinity = 29.6;
 
     strcpy(atom[39].name, "Zirconium");
     strcpy(atom[39].symbol, "Zr");
@@ -465,6 +663,11 @@ extern void table()
     strcpy(atom[39].group, "IVB");
     strcpy(atom[39].intgroup, "4");
     atom[39].period = 5;
+    atom[39].atomicradius = 160;
+    atom[39].meltingpoint = 2128.15;
+    atom[39].boilingpoint = 4682.15;
+    atom[39].electronegativity = 1.33;
+    atom[39].electronaffinity = 41.1;
 
     strcpy(atom[40].name, "Niobium");
     strcpy(atom[40].symbol, "Nb");
@@ -476,6 +679,11 @@ extern void table()
     strcpy(atom[40].group, "VB");
     strcpy(atom[40].intgroup, "5");
     atom[40].period = 5;
+    atom[40].atomicradius = 146;
+    atom[40].meltingpoint = 2750.15;
+    atom[40].boilingpoint = 5200.15;
+    atom[40].electronegativity = 1.6;
+    atom[40].electronaffinity = 86.1;
 
     strcpy(atom[41].name, "Molybdenum");
     strcpy(atom[41].symbol, "Mo");
@@ -487,6 +695,11 @@ extern void table()
     strcpy(atom[41].group, "VIB");
     strcpy(atom[41].intgroup, "6");
     atom[41].period = 5;
+    atom[41].atomicradius = 139;
+    atom[41].meltingpoint = 2896.15;
+    atom[41].boilingpoint = 4912.15;
+    atom[41].electronegativity = 2.16;
+    atom[41].electronaffinity = 71.9;
 
     strcpy(atom[42].name, "Technetium");
     strcpy(atom[42].symbol, "Tc");
@@ -498,6 +711,11 @@ extern void table()
     strcpy(atom[42].group, "VIIB");
     strcpy(atom[42].intgroup, "7");
     atom[42].period = 5;
+    atom[42].atomicradius = 136;
+    atom[42].meltingpoint = 2430.15;
+    atom[42].boilingpoint = 4538.15;
+    atom[42].electronegativity = 1.9;
+    atom[42].electronaffinity = 53;
 
     strcpy(atom[43].name, "Ruthenium");
     strcpy(atom[43].symbol, "Ru");
@@ -509,6 +727,11 @@ extern void table()
     strcpy(atom[43].group, "VIIIB");
     strcpy(atom[43].intgroup, "8");
     atom[43].period = 5;
+    atom[43].atomicradius = 134;
+    atom[43].meltingpoint = 2607.15;
+    atom[43].boilingpoint = 4350.15;
+    atom[43].electronegativity = 2.2;
+    atom[43].electronaffinity = 101.3;
 
     strcpy(atom[44].name, "Rhodium");
     strcpy(atom[44].symbol, "Rh");
@@ -520,6 +743,11 @@ extern void table()
     strcpy(atom[44].group, "VIIIB");
     strcpy(atom[44].intgroup, "9");
     atom[44].period = 5;
+    atom[44].atomicradius = 134;
+    atom[44].meltingpoint = 2237.15;
+    atom[44].boilingpoint = 4000.15;
+    atom[44].electronegativity = 2.28;
+    atom[44].electronaffinity = 109.7;
 
     strcpy(atom[45].name, "Palladium");
     strcpy(atom[45].symbol, "Pd");
@@ -531,6 +759,11 @@ extern void table()
     strcpy(atom[45].group, "VIIIB");
     strcpy(atom[45].intgroup, "10");
     atom[45].period = 5;
+    atom[45].atomicradius = 137;
+    atom[45].meltingpoint = 1828.15;
+    atom[45].boilingpoint = 3236.15;
+    atom[45].electronegativity = 2.2;
+    atom[45].electronaffinity = 53.7;
 
     strcpy(atom[46].name, "Silver");
     strcpy(atom[46].symbol, "Ag");
@@ -542,6 +775,11 @@ extern void table()
     strcpy(atom[46].group, "IB");
     strcpy(atom[46].intgroup, "11");
     atom[46].period = 5;
+    atom[46].atomicradius = 144;
+    atom[46].meltingpoint = 1234.95;
+    atom[46].boilingpoint = 2435.15;
+    atom[46].electronegativity = 1.93;
+    atom[46].electronaffinity = 125.6;
 
     strcpy(atom[47].name, "Cadmium");
     strcpy(atom[47].symbol, "Cd");
@@ -553,6 +791,11 @@ extern void table()
     strcpy(atom[47].group, "IIB");
     strcpy(atom[47].intgroup, "12");
     atom[47].period = 5;
+    atom[47].atomicradius = 154;
+    atom[47].meltingpoint = 592.25;
+    atom[47].boilingpoint = 1039.95;
+    atom[47].electronegativity = 1.69;
+    atom[47].electronaffinity = 0;
 
     strcpy(atom[48].name, "Indium");
     strcpy(atom[48].symbol, "In");
@@ -564,6 +807,11 @@ extern void table()
     strcpy(atom[48].group, "IIIA");
     strcpy(atom[48].intgroup, "13");
     atom[48].period = 5;
+    atom[48].atomicradius = 166;
+    atom[48].meltingpoint = 429.75;
+    atom[48].boilingpoint = 2345.15;
+    atom[48].electronegativity = 1.78;
+    atom[48].electronaffinity = 28.9;
 
     strcpy(atom[49].name, "Tin");
     strcpy(atom[49].symbol, "Sn");
@@ -575,6 +823,11 @@ extern void table()
     strcpy(atom[49].group, "IVA");
     strcpy(atom[49].intgroup, "14");
     atom[49].period = 5;
+    atom[49].atomicradius = 162;
+    atom[49].meltingpoint = 505.08;
+    atom[49].boilingpoint = 2875.15;
+    atom[49].electronegativity = 1.96;
+    atom[49].electronaffinity = 107.3;
 
     strcpy(atom[50].name, "Antimony");
     strcpy(atom[50].symbol, "Sb");
@@ -586,6 +839,11 @@ extern void table()
     strcpy(atom[50].group, "VA");
     strcpy(atom[50].intgroup, "15");
     atom[50].period = 5;
+    atom[50].atomicradius = 159;
+    atom[50].meltingpoint = 903.9;
+    atom[50].boilingpoint = 1860.15;
+    atom[50].electronegativity = 2.05;
+    atom[50].electronaffinity = 103.2;
 
     strcpy(atom[51].name, "Tellurium");
     strcpy(atom[51].symbol, "Te");
@@ -597,6 +855,11 @@ extern void table()
     strcpy(atom[51].group, "VIA");
     strcpy(atom[51].intgroup, "16");
     atom[51].period = 5;
+    atom[51].atomicradius = 160;
+    atom[51].meltingpoint = 722.7;
+    atom[51].boilingpoint = 1260.95;
+    atom[51].electronegativity = 2.1;
+    atom[51].electronaffinity = 190.2;
 
     strcpy(atom[52].name, "Iodine");
     strcpy(atom[52].symbol, "I");
@@ -608,6 +871,11 @@ extern void table()
     strcpy(atom[52].group, "VIIA");
     strcpy(atom[52].intgroup, "17");
     atom[52].period = 5;
+    atom[52].atomicradius = 136;
+    atom[52].meltingpoint = 386.7;
+    atom[52].boilingpoint = 457.5;
+    atom[52].electronegativity = 2.66;
+    atom[52].electronaffinity = 295.2;
 
     strcpy(atom[53].name, "Xenon");
     strcpy(atom[53].symbol, "Xe");
@@ -619,6 +887,11 @@ extern void table()
     strcpy(atom[53].group, "VIIIA");
     strcpy(atom[53].intgroup, "18");
     atom[53].period = 5;
+    atom[53].atomicradius = 108;
+    atom[53].meltingpoint = 161.35;
+    atom[53].boilingpoint = 165.05;
+    atom[53].electronegativity = 2.6;
+    atom[53].electronaffinity = 0;
 
     strcpy(atom[54].name, "Caesium");
     strcpy(atom[54].symbol, "Cs");
@@ -630,6 +903,11 @@ extern void table()
     strcpy(atom[54].group, "IA");
     strcpy(atom[54].intgroup, "1");
     atom[54].period = 6;
+    atom[54].atomicradius = 267;
+    atom[54].meltingpoint = 301.6;
+    atom[54].boilingpoint = 943.95;
+    atom[54].electronegativity = 0.79;
+    atom[54].electronaffinity = 45.5;
 
     strcpy(atom[55].name, "Barium");
     strcpy(atom[55].symbol, "Ba");
@@ -641,6 +919,11 @@ extern void table()
     strcpy(atom[55].group, "IIA");
     strcpy(atom[55].intgroup, "2");
     atom[55].period = 6;
+    atom[55].atomicradius = 222;
+    atom[55].meltingpoint = 1000.15;
+    atom[55].boilingpoint = 2170.15;
+    atom[55].electronegativity = 0.89;
+    atom[55].electronaffinity = 13.95;
 
     strcpy(atom[56].name, "Lanthanum");
     strcpy(atom[56].symbol, "La");
@@ -652,6 +935,11 @@ extern void table()
     strcpy(atom[56].group, "IIIB");
     strcpy(atom[56].intgroup, "3");
     atom[56].period = 6;
+    atom[56].atomicradius = 187;
+    atom[56].meltingpoint = 1193.15;
+    atom[56].boilingpoint = 3737.15;
+    atom[56].electronegativity = 1.1;
+    atom[56].electronaffinity = 48;
 
     strcpy(atom[57].name, "Cerium");
     strcpy(atom[57].symbol, "Ce");
@@ -663,6 +951,11 @@ extern void table()
     strcpy(atom[57].group, "-");
     strcpy(atom[57].intgroup, "-");
     atom[57].period = 6;
+    atom[57].atomicradius = 181;
+    atom[57].meltingpoint = 1068.15;
+    atom[57].boilingpoint = 3716.15;
+    atom[57].electronegativity = 1.12;
+    atom[57].electronaffinity = 50;
 
     strcpy(atom[58].name, "Praseodymium");
     strcpy(atom[58].symbol, "Pr");
@@ -674,6 +967,11 @@ extern void table()
     strcpy(atom[58].group, "-");
     strcpy(atom[58].intgroup, "-");
     atom[58].period = 6;
+    atom[58].atomicradius = 182;
+    atom[58].meltingpoint = 1204.15;
+    atom[58].boilingpoint = 3785.15;
+    atom[58].electronegativity = 1.13;
+    atom[58].electronaffinity = 50;
 
     strcpy(atom[59].name, "Neodumium");
     strcpy(atom[59].symbol, "Nd");
@@ -685,6 +983,11 @@ extern void table()
     strcpy(atom[59].group, "-");
     strcpy(atom[59].intgroup, "-");
     atom[59].period = 6;
+    atom[59].atomicradius = 182;
+    atom[59].meltingpoint = 1283.15;
+    atom[59].boilingpoint = 3347.15;
+    atom[59].electronegativity = 1.14;
+    atom[59].electronaffinity = 50;
 
     strcpy(atom[60].name, "Promethium");
     strcpy(atom[60].symbol, "Pm");
@@ -696,6 +999,11 @@ extern void table()
     strcpy(atom[60].group, "-");
     strcpy(atom[60].intgroup, "-");
     atom[60].period = 6;
+    atom[60].atomicradius = 183;
+    atom[60].meltingpoint = 1440.15;
+    atom[60].boilingpoint = 3273.15;
+    atom[60].electronegativity = 0;
+    atom[60].electronaffinity = 50;
 
     strcpy(atom[61].name, "Samarium");
     strcpy(atom[61].symbol, "Sm");
@@ -707,6 +1015,11 @@ extern void table()
     strcpy(atom[61].group, "-");
     strcpy(atom[61].intgroup, "-");
     atom[61].period = 6;
+    atom[61].atomicradius = 181;
+    atom[61].meltingpoint = 1345.15;
+    atom[61].boilingpoint = 2067.15;
+    atom[61].electronegativity = 1.1;
+    atom[61].electronaffinity = 50;
 
     strcpy(atom[62].name, "Europium");
     strcpy(atom[62].symbol, "Eu");
@@ -718,6 +1031,11 @@ extern void table()
     strcpy(atom[62].group, "-");
     strcpy(atom[62].intgroup, "-");
     atom[62].period = 6;
+    atom[62].atomicradius = 199;
+    atom[62].meltingpoint = 1095.15;
+    atom[62].boilingpoint = 1870.15;
+    atom[62].electronegativity = 0;
+    atom[62].electronaffinity = 50;
 
     strcpy(atom[63].name, "Gadolinium");
     strcpy(atom[63].symbol, "Gd");
@@ -729,6 +1047,11 @@ extern void table()
     strcpy(atom[63].group, "-");
     strcpy(atom[63].intgroup, "-");
     atom[63].period = 6;
+    atom[63].atomicradius = 179;
+    atom[63].meltingpoint = 1584.15;
+    atom[63].boilingpoint = 3545.15;
+    atom[63].electronegativity = 1.2;
+    atom[63].electronaffinity = 50;
 
     strcpy(atom[64].name, "Terbium");
     strcpy(atom[64].symbol, "Tb");
@@ -740,6 +1063,11 @@ extern void table()
     strcpy(atom[64].group, "-");
     strcpy(atom[64].intgroup, "-");
     atom[64].period = 6;
+    atom[64].atomicradius = 180;
+    atom[64].meltingpoint = 1633.15;
+    atom[64].boilingpoint = 3500.15;
+    atom[64].electronegativity = 0;
+    atom[64].electronaffinity = 50;
 
     strcpy(atom[65].name, "Dysprosium");
     strcpy(atom[65].symbol, "Dy");
@@ -751,6 +1079,11 @@ extern void table()
     strcpy(atom[65].group, "-");
     strcpy(atom[65].intgroup, "-");
     atom[65].period = 6;
+    atom[65].atomicradius = 180;
+    atom[65].meltingpoint = 1682.15;
+    atom[65].boilingpoint = 2840.15;
+    atom[65].electronegativity = 1.22;
+    atom[65].electronaffinity = 50;
 
     strcpy(atom[66].name, "Holmium");
     strcpy(atom[66].symbol, "Ho");
@@ -762,6 +1095,11 @@ extern void table()
     strcpy(atom[66].group, "-");
     strcpy(atom[66].intgroup, "-");
     atom[66].period = 6;
+    atom[66].atomicradius = 179;
+    atom[66].meltingpoint = 1743.15;
+    atom[66].boilingpoint = 2968.15;
+    atom[66].electronegativity = 1.23;
+    atom[66].electronaffinity = 50;
 
     strcpy(atom[67].name, "Erbium");
     strcpy(atom[67].symbol, "Er");
@@ -773,6 +1111,11 @@ extern void table()
     strcpy(atom[67].group, "-");
     strcpy(atom[67].intgroup, "-");
     atom[67].period = 6;
+    atom[67].atomicradius = 178;
+    atom[67].meltingpoint = 1802.15;
+    atom[67].boilingpoint = 3140.15;
+    atom[67].electronegativity = 1.24;
+    atom[67].electronaffinity = 50;
 
     strcpy(atom[68].name, "Thulium");
     strcpy(atom[68].symbol, "Tm");
@@ -784,6 +1127,11 @@ extern void table()
     strcpy(atom[68].group, "-");
     strcpy(atom[68].intgroup, "-");
     atom[68].period = 6;
+    atom[68].atomicradius = 177;
+    atom[68].meltingpoint = 1818.15;
+    atom[68].boilingpoint = 2220.15;
+    atom[68].electronegativity = 1.25;
+    atom[68].electronaffinity = 50;
 
     strcpy(atom[69].name, "Ytterbium");
     strcpy(atom[69].symbol, "Yb");
@@ -795,6 +1143,11 @@ extern void table()
     strcpy(atom[69].group, "-");
     strcpy(atom[69].intgroup, "-");
     atom[69].period = 6;
+    atom[69].atomicradius = 176;
+    atom[69].meltingpoint = 1097.15;
+    atom[69].boilingpoint = 1466.15;
+    atom[69].electronegativity = 0;
+    atom[69].electronaffinity = 50;
 
     strcpy(atom[70].name, "Lutetium");
     strcpy(atom[70].symbol, "Lu");
@@ -806,6 +1159,11 @@ extern void table()
     strcpy(atom[70].group, "-");
     strcpy(atom[70].intgroup, "-");
     atom[70].period = 6;
+    atom[70].atomicradius = 175;
+    atom[70].meltingpoint = 1936.15;
+    atom[70].boilingpoint = 3668.15;
+    atom[70].electronegativity = 1.27;
+    atom[70].electronaffinity = 50;
 
     strcpy(atom[71].name, "Hafnium");
     strcpy(atom[71].symbol, "Hf");
@@ -817,6 +1175,11 @@ extern void table()
     strcpy(atom[71].group, "IVB");
     strcpy(atom[71].intgroup, "4");
     atom[71].period = 6;
+    atom[71].atomicradius = 167;
+    atom[71].meltingpoint = 2506.15;
+    atom[71].boilingpoint = 4875.15;
+    atom[71].electronegativity = 1.3;
+    atom[71].electronaffinity = 0;
 
     strcpy(atom[72].name, "Tantalum");
     strcpy(atom[72].symbol, "Ta");
@@ -828,6 +1191,11 @@ extern void table()
     strcpy(atom[72].group, "VB");
     strcpy(atom[72].intgroup, "5");
     atom[72].period = 6;
+    atom[72].atomicradius = 149;
+    atom[72].meltingpoint = 3290.15;
+    atom[72].boilingpoint = 5731.15;
+    atom[72].electronegativity = 1.5;
+    atom[72].electronaffinity = 31;
 
     strcpy(atom[73].name, "Tungsten");
     strcpy(atom[73].symbol, "W");
@@ -839,6 +1207,11 @@ extern void table()
     strcpy(atom[73].group, "VIB");
     strcpy(atom[73].intgroup, "6");
     atom[73].period = 6;
+    atom[73].atomicradius = 141;
+    atom[73].meltingpoint = 3695.15;
+    atom[73].boilingpoint = 5828.15;
+    atom[73].electronegativity = 2.36;
+    atom[73].electronaffinity = 78.6;
 
     strcpy(atom[74].name, "Rhenium");
     strcpy(atom[74].symbol, "Re");
@@ -850,6 +1223,11 @@ extern void table()
     strcpy(atom[74].group, "VIIB");
     strcpy(atom[74].intgroup, "7");
     atom[74].period = 6;
+    atom[74].atomicradius = 137;
+    atom[74].meltingpoint = 3453.15;
+    atom[74].boilingpoint = 5900.15;
+    atom[74].electronegativity = 1.9;
+    atom[74].electronaffinity = 14.5;
 
     strcpy(atom[75].name, "Osmium");
     strcpy(atom[75].symbol, "Os");
@@ -861,6 +1239,11 @@ extern void table()
     strcpy(atom[75].group, "VIIIB");
     strcpy(atom[75].intgroup, "8");
     atom[75].period = 6;
+    atom[75].atomicradius = 135;
+    atom[75].meltingpoint = 3306.15;
+    atom[75].boilingpoint = 5870.15;
+    atom[75].electronegativity = 2.2;
+    atom[75].electronaffinity = 106.1;
 
     strcpy(atom[76].name, "Iridium");
     strcpy(atom[76].symbol, "Ir");
@@ -872,6 +1255,11 @@ extern void table()
     strcpy(atom[76].group, "VIIIB");
     strcpy(atom[76].intgroup, "9");
     atom[76].period = 6;
+    atom[76].atomicradius = 136;
+    atom[76].meltingpoint = 2683.15;
+    atom[76].boilingpoint = 4403.15;
+    atom[76].electronegativity = 2.2;
+    atom[76].electronaffinity = 151;
 
     strcpy(atom[77].name, "Platinum");
     strcpy(atom[77].symbol, "Pt");
@@ -883,6 +1271,11 @@ extern void table()
     strcpy(atom[77].group, "VIIIB");
     strcpy(atom[77].intgroup, "10");
     atom[77].period = 6;
+    atom[77].atomicradius = 139;
+    atom[77].meltingpoint = 2041.15;
+    atom[77].boilingpoint = 4098.15;
+    atom[77].electronegativity = 2.28;
+    atom[77].electronaffinity = 205.3;
 
     strcpy(atom[78].name, "Gold");
     strcpy(atom[78].symbol, "Au");
@@ -894,6 +1287,11 @@ extern void table()
     strcpy(atom[78].group, "IB");
     strcpy(atom[78].intgroup, "11");
     atom[78].period = 6;
+    atom[78].atomicradius = 144;
+    atom[78].meltingpoint = 1337.58;
+    atom[78].boilingpoint = 2973.15;
+    atom[78].electronegativity = 2.54;
+    atom[78].electronaffinity = 222.8;
 
     strcpy(atom[79].name, "Mercury");
     strcpy(atom[79].symbol, "Hg");
@@ -905,6 +1303,11 @@ extern void table()
     strcpy(atom[79].group, "IIB");
     strcpy(atom[79].intgroup, "12");
     atom[79].period = 6;
+    atom[79].atomicradius = 157;
+    atom[79].meltingpoint = 234.26;
+    atom[79].boilingpoint = 629.85;
+    atom[79].electronegativity = 2;
+    atom[79].electronaffinity = 0;
 
     strcpy(atom[80].name, "Thallium");
     strcpy(atom[80].symbol, "Tl");
@@ -916,6 +1319,11 @@ extern void table()
     strcpy(atom[80].group, "IIIA");
     strcpy(atom[80].intgroup, "13");
     atom[80].period = 6;
+    atom[80].atomicradius = 171;
+    atom[80].meltingpoint = 576.75;
+    atom[80].boilingpoint = 1746.15;
+    atom[80].electronegativity = 1.62;
+    atom[80].electronaffinity = 19.2;
 
     strcpy(atom[81].name, "Lead");
     strcpy(atom[81].symbol, "Pb");
@@ -927,6 +1335,11 @@ extern void table()
     strcpy(atom[81].group, "IVA");
     strcpy(atom[81].intgroup, "14");
     atom[81].period = 6;
+    atom[81].atomicradius = 175;
+    atom[81].meltingpoint = 600.55;
+    atom[81].boilingpoint = 2022.15;
+    atom[81].electronegativity = 2.33;
+    atom[81].electronaffinity = 35.1;
 
     strcpy(atom[82].name, "Bismuth");
     strcpy(atom[82].symbol, "Bi");
@@ -938,6 +1351,11 @@ extern void table()
     strcpy(atom[82].group, "VA");
     strcpy(atom[82].intgroup, "15");
     atom[82].period = 6;
+    atom[82].atomicradius = 170;
+    atom[82].meltingpoint = 544.45;
+    atom[82].boilingpoint = 1833.15;
+    atom[82].electronegativity = 2.02;
+    atom[82].electronaffinity = 91.2;
 
     strcpy(atom[83].name, "Polonium");
     strcpy(atom[83].symbol, "Po");
@@ -949,6 +1367,11 @@ extern void table()
     strcpy(atom[83].group, "VIA");
     strcpy(atom[83].intgroup, "16");
     atom[83].period = 6;
+    atom[83].atomicradius = 176;
+    atom[83].meltingpoint = 527.15;
+    atom[83].boilingpoint = 1235.15;
+    atom[83].electronegativity = 2;
+    atom[83].electronaffinity = 183.3;
 
     strcpy(atom[84].name, "Astatine");
     strcpy(atom[84].symbol, "At");
@@ -960,6 +1383,11 @@ extern void table()
     strcpy(atom[84].group, "VIIA");
     strcpy(atom[84].intgroup, "17");
     atom[84].period = 6;
+    atom[84].atomicradius = 145;
+    atom[84].meltingpoint = 503.15;
+    atom[84].boilingpoint = 609.95;
+    atom[84].electronegativity = 2.2;
+    atom[84].electronaffinity = 270.1;
 
     strcpy(atom[85].name, "Radon");
     strcpy(atom[85].symbol, "Rn");
@@ -971,6 +1399,11 @@ extern void table()
     strcpy(atom[85].group, "VIIIA");
     strcpy(atom[85].intgroup, "18");
     atom[85].period = 6;
+    atom[85].atomicradius = 214;
+    atom[85].meltingpoint = 202.0;
+    atom[85].boilingpoint = 211.45;
+    atom[85].electronegativity = 0;
+    atom[85].electronaffinity = 0;
 
     strcpy(atom[86].name, "Francium");
     strcpy(atom[86].symbol, "Fr");
@@ -982,6 +1415,11 @@ extern void table()
     strcpy(atom[86].group, "IA");
     strcpy(atom[86].intgroup, "1");
     atom[86].period = 7;
+    atom[86].atomicradius = 290;
+    atom[86].meltingpoint = 281.15;
+    atom[86].boilingpoint = 949.95;
+    atom[86].electronegativity = 0.7;
+    atom[86].electronaffinity = 1;
 
     strcpy(atom[87].name, "Radium");
     strcpy(atom[87].symbol, "Ra");
@@ -993,6 +1431,11 @@ extern void table()
     strcpy(atom[87].group, "IIA");
     strcpy(atom[87].intgroup, "2");
     atom[87].period = 7;
+    atom[87].atomicradius = 215;
+    atom[87].meltingpoint = 969.15;
+    atom[87].boilingpoint = 2010.15;
+    atom[87].electronegativity = 0.9;
+    atom[87].electronaffinity = 2;
 
     strcpy(atom[88].name, "Actinium");
     strcpy(atom[88].symbol, "Ac");
@@ -1004,6 +1447,11 @@ extern void table()
     strcpy(atom[88].group, "IIIB");
     strcpy(atom[88].intgroup, "3");
     atom[88].period = 7;
+    atom[88].atomicradius = 188;
+    atom[88].meltingpoint = 1323.15;
+    atom[88].boilingpoint = 3470.15;
+    atom[88].electronegativity = 1.1;
+    atom[88].electronaffinity = 0;
 
     strcpy(atom[89].name, "Thorium");
     strcpy(atom[89].symbol, "Th");
@@ -1015,6 +1463,11 @@ extern void table()
     strcpy(atom[89].group, "-");
     strcpy(atom[89].intgroup, "-");
     atom[89].period = 7;
+    atom[89].atomicradius = 180;
+    atom[89].meltingpoint = 2023.15;
+    atom[89].boilingpoint = 5060.15;
+    atom[89].electronegativity = 1.3;
+    atom[89].electronaffinity = 0;
 
     strcpy(atom[90].name, "Protactinium");
     strcpy(atom[90].symbol, "Pa");
@@ -1026,6 +1479,11 @@ extern void table()
     strcpy(atom[90].group, "-");
     strcpy(atom[90].intgroup, "-");
     atom[90].period = 7;
+    atom[90].atomicradius = 161;
+    atom[90].meltingpoint = 2113.15;
+    atom[90].boilingpoint = 4300.15;
+    atom[90].electronegativity = 1.5;
+    atom[90].electronaffinity = 0;
 
     strcpy(atom[91].name, "Uranium");
     strcpy(atom[91].symbol, "U");
@@ -1037,6 +1495,11 @@ extern void table()
     strcpy(atom[91].group, "-");
     strcpy(atom[91].intgroup, "-");
     atom[91].period = 7;
+    atom[91].atomicradius = 138;
+    atom[91].meltingpoint = 1405.55;
+    atom[91].boilingpoint = 4404.15;
+    atom[91].electronegativity = 1.38;
+    atom[91].electronaffinity = 0;
 
     strcpy(atom[92].name, "Neptunium");
     strcpy(atom[92].symbol, "Np");
@@ -1048,6 +1511,11 @@ extern void table()
     strcpy(atom[92].group, "-");
     strcpy(atom[92].intgroup, "-");
     atom[92].period = 7;
+    atom[92].atomicradius = 130;
+    atom[92].meltingpoint = 917.15;
+    atom[92].boilingpoint = 4175.15;
+    atom[92].electronegativity = 1.36;
+    atom[92].electronaffinity = 0;
 
     strcpy(atom[93].name, "Plutonium");
     strcpy(atom[93].symbol, "Pu");
@@ -1059,6 +1527,11 @@ extern void table()
     strcpy(atom[93].group, "-");
     strcpy(atom[93].intgroup, "-");
     atom[93].period = 7;
+    atom[93].atomicradius = 162;
+    atom[93].meltingpoint = 914.15;
+    atom[93].boilingpoint = 3505.15;
+    atom[93].electronegativity = 1.28;
+    atom[93].electronaffinity = 0;
 
     strcpy(atom[94].name, "Americium");
     strcpy(atom[94].symbol, "Am");
@@ -1070,6 +1543,11 @@ extern void table()
     strcpy(atom[94].group, "-");
     strcpy(atom[94].intgroup, "-");
     atom[94].period = 7;
+    atom[94].atomicradius = 173;
+    atom[94].meltingpoint = 1449.15;
+    atom[94].boilingpoint = 2880.15;
+    atom[94].electronegativity = 1.3;
+    atom[94].electronaffinity = 0;
 
     strcpy(atom[95].name, "Curium");
     strcpy(atom[95].symbol, "Cm");
@@ -1081,6 +1559,11 @@ extern void table()
     strcpy(atom[95].group, "-");
     strcpy(atom[95].intgroup, "-");
     atom[95].period = 7;
+    atom[95].atomicradius = 299;
+    atom[95].meltingpoint = 1618.15;
+    atom[95].boilingpoint = 3383.15;
+    atom[95].electronegativity = 1.3;
+    atom[95].electronaffinity = 0;
 
     strcpy(atom[96].name, "Berkelium");
     strcpy(atom[96].symbol, "Bk");
@@ -1092,6 +1575,11 @@ extern void table()
     strcpy(atom[96].group, "-");
     strcpy(atom[96].intgroup, "-");
     atom[96].period = 7;
+    atom[96].atomicradius = 297;
+    atom[96].meltingpoint = 1259.15;
+    atom[96].boilingpoint = 2900.15;
+    atom[96].electronegativity = 1.3;
+    atom[96].electronaffinity = 0;
 
     strcpy(atom[97].name, "Californium");
     strcpy(atom[97].symbol, "Cf");
@@ -1103,6 +1591,11 @@ extern void table()
     strcpy(atom[97].group, "-");
     strcpy(atom[97].intgroup, "-");
     atom[97].period = 7;
+    atom[97].atomicradius = 295;
+    atom[97].meltingpoint = 1173.15;
+    atom[97].boilingpoint = 1745.15;
+    atom[97].electronegativity = 1.3;
+    atom[97].electronaffinity = 0;
 
     strcpy(atom[98].name, "Einsteinium");
     strcpy(atom[98].symbol, "Es");
@@ -1114,6 +1607,11 @@ extern void table()
     strcpy(atom[98].group, "-");
     strcpy(atom[98].intgroup, "-");
     atom[98].period = 7;
+    atom[98].atomicradius = 292;
+    atom[98].meltingpoint = 1133.15;
+    atom[98].boilingpoint = 0;
+    atom[98].electronegativity = 1.3;
+    atom[98].electronaffinity = 0;
 
     strcpy(atom[99].name, "Fermium");
     strcpy(atom[99].symbol, "Fm");
@@ -1125,6 +1623,11 @@ extern void table()
     strcpy(atom[99].group, "-");
     strcpy(atom[99].intgroup, "-");
     atom[99].period = 7;
+    atom[99].atomicradius = 290;
+    atom[99].meltingpoint = 1798.15;
+    atom[99].boilingpoint = 0;
+    atom[99].electronegativity = 1.3;
+    atom[99].electronaffinity = 0;
 
     strcpy(atom[100].name, "Mendelevium");
     strcpy(atom[100].symbol, "Md");
@@ -1136,6 +1639,11 @@ extern void table()
     strcpy(atom[100].group, "-");
     strcpy(atom[100].intgroup, "-");
     atom[100].period = 7;
+    atom[100].atomicradius = 287;
+    atom[100].meltingpoint = 1098.5;
+    atom[100].boilingpoint = 0;
+    atom[100].electronegativity = 1.3;
+    atom[100].electronaffinity = 0;
 
     strcpy(atom[101].name, "Nobelium");
     strcpy(atom[101].symbol, "No");
@@ -1147,6 +1655,11 @@ extern void table()
     strcpy(atom[101].group, "-");
     strcpy(atom[101].intgroup, "-");
     atom[101].period = 7;
+    atom[101].atomicradius = 285;
+    atom[101].meltingpoint = 1098.15;
+    atom[101].boilingpoint = 0;
+    atom[101].electronegativity = 1.3;
+    atom[101].electronaffinity = 0;
 
     strcpy(atom[102].name, "Lawrencium");
     strcpy(atom[102].symbol, "Lr");
@@ -1158,6 +1671,11 @@ extern void table()
     strcpy(atom[102].group, "-");
     strcpy(atom[102].intgroup, "-");
     atom[102].period = 7;
+    atom[102].atomicradius = 282;
+    atom[102].meltingpoint = 1898.15;
+    atom[102].boilingpoint = 0;
+    atom[102].electronegativity = 0;
+    atom[102].electronaffinity = 0;
 
     strcpy(atom[103].name, "Rutherfordium");
     strcpy(atom[103].symbol, "Rf");
@@ -1169,6 +1687,11 @@ extern void table()
     strcpy(atom[103].group, "IVB");
     strcpy(atom[103].intgroup, "4");
     atom[103].period = 7;
+    atom[103].atomicradius = 0;
+    atom[103].meltingpoint = 2373.15;
+    atom[103].boilingpoint = 5773.15;
+    atom[103].electronegativity = 0;
+    atom[103].electronaffinity = 0;
 
     strcpy(atom[104].name, "Dubnium");
     strcpy(atom[104].symbol, "Db");
@@ -1180,6 +1703,11 @@ extern void table()
     strcpy(atom[104].group, "VB");
     strcpy(atom[104].intgroup, "5");
     atom[104].period = 7;
+    atom[104].atomicradius = 0;
+    atom[104].meltingpoint = 0;
+    atom[104].boilingpoint = 0;
+    atom[104].electronegativity = 0;
+    atom[104].electronaffinity = 0;
 
     strcpy(atom[105].name, "Seaborgium");
     strcpy(atom[105].symbol, "Sg");
@@ -1191,6 +1719,11 @@ extern void table()
     strcpy(atom[105].group, "VIB");
     strcpy(atom[105].intgroup, "6");
     atom[105].period = 7;
+    atom[105].atomicradius = 0;
+    atom[105].meltingpoint = 0;
+    atom[105].boilingpoint = 0;
+    atom[105].electronegativity = 0;
+    atom[105].electronaffinity = 0;
 
     strcpy(atom[106].name, "Bohrium");
     strcpy(atom[106].symbol, "Bh");
@@ -1202,6 +1735,11 @@ extern void table()
     strcpy(atom[106].group, "VIIB");
     strcpy(atom[106].intgroup, "7");
     atom[106].period = 7;
+    atom[106].atomicradius = 128;
+    atom[106].meltingpoint = 0;
+    atom[106].boilingpoint = 0;
+    atom[106].electronegativity = 0;
+    atom[106].electronaffinity = 0;
 
     strcpy(atom[107].name, "Hassium");
     strcpy(atom[107].symbol, "Hs");
@@ -1213,6 +1751,11 @@ extern void table()
     strcpy(atom[107].group, "VIIIB");
     strcpy(atom[107].intgroup, "8");
     atom[107].period = 7;
+    atom[107].atomicradius = 0;
+    atom[107].meltingpoint = 0;
+    atom[107].boilingpoint = 0;
+    atom[107].electronegativity = 0;
+    atom[107].electronaffinity = 0;
 
     strcpy(atom[108].name, "Meinerium");
     strcpy(atom[108].symbol, "Mt");
@@ -1224,6 +1767,11 @@ extern void table()
     strcpy(atom[108].group, "VIIIB");
     strcpy(atom[108].intgroup, "9");
     atom[108].period = 7;
+    atom[108].atomicradius = 0;
+    atom[108].meltingpoint = 0;
+    atom[108].boilingpoint = 0;
+    atom[108].electronegativity = 0;
+    atom[108].electronaffinity = 0;
 
     strcpy(atom[109].name, "Darmstadtium");
     strcpy(atom[109].symbol, "Ds");
@@ -1235,6 +1783,11 @@ extern void table()
     strcpy(atom[109].group, "VIIIB");
     strcpy(atom[109].intgroup, "10");
     atom[109].period = 7;
+    atom[109].atomicradius = 0;
+    atom[109].meltingpoint = 0;
+    atom[109].boilingpoint = 0;
+    atom[109].electronegativity = 0;
+    atom[109].electronaffinity = 0;
 
     strcpy(atom[110].name, "Roentgenium");
     strcpy(atom[109].symbol, "Rg");
@@ -1246,6 +1799,11 @@ extern void table()
     strcpy(atom[110].group, "IB");
     strcpy(atom[110].intgroup, "11");
     atom[110].period = 7;
+    atom[110].atomicradius = 0;
+    atom[110].meltingpoint = 0;
+    atom[110].boilingpoint = 0;
+    atom[110].electronegativity = 0;
+    atom[110].electronaffinity = 0;
 
     strcpy(atom[111].name, "Copernicium");
     strcpy(atom[111].symbol, "Cn");
@@ -1257,6 +1815,11 @@ extern void table()
     strcpy(atom[111].group, "IIB");
     strcpy(atom[111].intgroup, "12");
     atom[111].period = 7;
+    atom[111].atomicradius = 0;
+    atom[111].meltingpoint = 0;
+    atom[111].boilingpoint = 0;
+    atom[111].electronegativity = 0;
+    atom[111].electronaffinity = 0;
 
     strcpy(atom[112].name, "Nihonium");
     strcpy(atom[112].symbol, "Nh");
@@ -1268,6 +1831,11 @@ extern void table()
     strcpy(atom[112].group, "IIIA");
     strcpy(atom[112].intgroup, "13");
     atom[112].period = 7;
+    atom[112].atomicradius = 170;
+    atom[112].meltingpoint = 698.15;
+    atom[112].boilingpoint = 1428.15;
+    atom[112].electronegativity = 0;
+    atom[112].electronaffinity = 0;
 
     strcpy(atom[113].name, "Flerovium");
     strcpy(atom[113].symbol, "Fl");
@@ -1279,6 +1847,11 @@ extern void table()
     strcpy(atom[113].group, "IVA");
     strcpy(atom[113].intgroup, "14");
     atom[113].period = 7;
+    atom[113].atomicradius = 0;
+    atom[113].meltingpoint = 341.15;
+    atom[113].boilingpoint = 419.15;
+    atom[113].electronegativity = 0;
+    atom[113].electronaffinity = 0;
 
     strcpy(atom[114].name, "Moscovium");
     strcpy(atom[114].symbol, "Mc");
@@ -1290,6 +1863,11 @@ extern void table()
     strcpy(atom[114].group, "VA");
     strcpy(atom[114].intgroup, "15");
     atom[114].period = 7;
+    atom[114].atomicradius = 0;
+    atom[114].meltingpoint = 0;
+    atom[114].boilingpoint = 0;
+    atom[114].electronegativity = 0;
+    atom[114].electronaffinity = 0;
 
     strcpy(atom[115].name, "Livermorium");
     strcpy(atom[115].symbol, "Lv");
@@ -1301,6 +1879,11 @@ extern void table()
     strcpy(atom[115].group, "VIA");
     strcpy(atom[115].intgroup, "16");
     atom[115].period = 7;
+    atom[115].atomicradius = 0;
+    atom[115].meltingpoint = 0;
+    atom[115].boilingpoint = 0;
+    atom[115].electronegativity = 0;
+    atom[115].electronaffinity = 0;
 
     strcpy(atom[116].name, "Tennessine");
     strcpy(atom[116].symbol, "Ts");
@@ -1312,6 +1895,11 @@ extern void table()
     strcpy(atom[116].group, "VIIA");
     strcpy(atom[116].intgroup, "17");
     atom[116].period = 7;
+    atom[116].atomicradius = 0;
+    atom[116].meltingpoint = 0;
+    atom[116].boilingpoint = 0;
+    atom[116].electronegativity = 0;
+    atom[116].electronaffinity = 0;
 
     strcpy(atom[117].name, "Oganesson");
     strcpy(atom[117].symbol, "Og");
@@ -1323,4 +1911,9 @@ extern void table()
     strcpy(atom[117].group, "VIIIA");
     strcpy(atom[117].intgroup, "18");
     atom[117].period = 7;
+    atom[117].atomicradius = 152;
+    atom[117].meltingpoint = 0;
+    atom[117].boilingpoint = 368.15;
+    atom[117].electronegativity = 0;
+    atom[117].electronaffinity = 0;
 }
