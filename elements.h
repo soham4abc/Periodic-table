@@ -5,20 +5,20 @@
 struct element
 {
     char name[20];
-    char symbol[3];
+    char symbol[4];
 
     int atomicnum;
     float atomicwt;
 
-    char configuration[85];
+    char configuration[90];
     float density;
 
     char colourbox[200];
 
-    char group[5];
-    char intgroup[2];
+    char group[6];
+    char intgroup[3];
     int period;
-    
+
     int atomicradius;
     float meltingpoint;
     float boilingpoint;
