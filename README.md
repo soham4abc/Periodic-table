@@ -1,20 +1,21 @@
-
-
-
 # Periodic Table
-Do you hate chemistry? I do! 
+2nd Semester C Programming Project by [ARITRA BELEL](https://github.com/belelaritra) & [SOHAM BANERJEE](https://github.com/soham4abc)
 <br>
 ## Overview:
-A simple periodic table program used for searching details about the elements in it
+A C Programming Project used for 
+1. [Searching Elements](#search-element) details (upto Atomic Number: 118)
+2. Knowing more about [Mendeleev's Periodic Table](#mendeleevs-periodic-table)
+3. Knowing more about [Modern Periodic Table](#modern-periodic-table)
 
-### Screenshots
+## Screenshots:
+### Home Screen
+<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS.png" width="800" height="450"/>
 
-![Screenshot 2021-07-29 172147](https://user-images.githubusercontent.com/63705023/127487191-19b76825-78b0-4e5f-8994-7db01fe04af9.png)
+### Search Element
+<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%203.png" width="800" height="450"/>
 
+### Mendeleev's Periodic Table
+<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%202.png" width="800" height="450"/>
 
-![Screenshot 2021-07-29 172727](https://user-images.githubusercontent.com/63705023/127487810-f6d2a5af-3814-408f-925c-8cddc33611f8.png)
-
-
-![thanks](https://media.giphy.com/media/3o6ozuHcxTtVWJJn32/giphy.gif)
-
-This README is Designed and written by [Soham Sarkar](https://github.com/smart-worker)
+### Modern Periodic Table
+<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%201.png" width="800" height="450"/>
