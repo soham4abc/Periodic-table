@@ -65,9 +65,13 @@ void Result(int index)
     printf("%sSymbol :%s %s%s%s\n", green_bold, clear_colour, red_bold, atom[index].symbol, clear_colour);
     printf("%sAtomic Number :%s %s%d%s\n", green_bold, clear_colour, cyan_bold, atom[index].atomicnum, clear_colour);
 
+    //printf("\n%sOverview:%s\n", white_bg_black_font, clear_colour);
+    printf("%sCAS Number:%s %s%s%s\n", green_bold, clear_colour, blue_bold, atom[index].casnumber, clear_colour);
+    printf("%sElectrons:%s %s%d%s %sProtons:%s %s%d%s %sNeutrons:%s %s%d%s\n", green_bold, clear_colour, cyan_bold, atom[index].electron, clear_colour, green_bold, clear_colour, cyan_bold, atom[index].proton, clear_colour, green_bold, clear_colour, cyan_bold, atom[index].neutron, clear_colour);
+
     printf("\n%sProperties:%s\n", Icyan_bg_black_font, clear_colour);
     printf("%sPeriod Number :%s %s%d%s\n", blue_bold, clear_colour, yellow_bold, atom[index].period, clear_colour);
-    printf("%sGroup Number :%s %s%s (%s)%s\n", blue_bold, clear_colour, red_bold, atom[index].intgroup, atom[index].group, clear_colour);
+    printf("%sGroup Number :%s %s%s%s %s(%s)%s\n", blue_bold, clear_colour, red_bold, atom[index].intgroup, clear_colour, red_bold, atom[index].group, clear_colour);
     printf("%sMelting Point :%s %s%g%s %sK%s\n", blue_bold, clear_colour, cyan_bold, atom[index].meltingpoint, clear_colour, white_bold, clear_colour);
     printf("%sBoiling Point :%s %s%g%s %sK%s\n", blue_bold, clear_colour, green_bold, atom[index].boilingpoint, clear_colour, white_bold, clear_colour);
     printf("%sAtomic Weight :%s %s%g%s %sg/mol%s\n", blue_bold, clear_colour, blue_bold, atom[index].atomicwt, clear_colour, white_bold, clear_colour);
@@ -80,6 +84,7 @@ void Result(int index)
 
     printf("\n%sAtomic Properties:%s\n", Ipurple_bg_black_font, clear_colour);
     printf("%sAtomic Radius :%s %s%d%s %spm%s\n", purple_bold, clear_colour, red_bold, atom[index].atomicradius, clear_colour, white_bold, clear_colour);
+    printf("%sElectron Shell:%s %s%s%s\n", purple_bold, clear_colour, yellow_bold, atom[index].electronshell, clear_colour);
     printf("%sElectronic Configuration :%s %s%s%s\n", purple_bold, clear_colour, cyan_bold, atom[index].configuration, clear_colour);
 }
 void quit()

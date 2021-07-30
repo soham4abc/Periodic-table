@@ -5,25 +5,31 @@
 struct element
 {
     char name[20];
-    char symbol[3];
+    char symbol[4];
 
     int atomicnum;
     float atomicwt;
 
-    char configuration[85];
+    char configuration[90];
     float density;
 
     char colourbox[200];
 
-    char group[5];
-    char intgroup[2];
+    char group[6];
+    char intgroup[3];
     int period;
-    
+
     int atomicradius;
     float meltingpoint;
     float boilingpoint;
     float electronegativity;
     float electronaffinity;
+
+    char casnumber[15];
+    char electronshell[31];
+    int electron;
+    int proton;
+    int neutron;
 
 } atom[118];
 
@@ -44,6 +50,11 @@ extern void table()
     atom[0].boilingpoint = 20.25;
     atom[0].electronegativity = 2.2;
     atom[0].electronaffinity = 72.8;
+    strcpy(atom[0].casnumber, "CAS13333-74-0");
+    strcpy(atom[0].electronshell, "K1 L0 M0 N0 O0 P0 Q0 R0");
+    atom[0].electron = 1;
+    atom[0].proton = 1;
+    atom[0].neutron = 0;
 
     strcpy(atom[1].name, "Helium");
     strcpy(atom[1].symbol, "He");
@@ -60,6 +71,11 @@ extern void table()
     atom[1].boilingpoint = 4.25;
     atom[1].electronegativity = 0;
     atom[1].electronaffinity = 0;
+    strcpy(atom[1].casnumber, "CAS7440-759-7");
+    strcpy(atom[1].electronshell, "K2 L0 M0 N0 O0 P0 Q0 R0");
+    atom[1].electron = 2;
+    atom[1].proton = 2;
+    atom[1].neutron = 2;
 
     strcpy(atom[2].name, "Lithium");
     strcpy(atom[2].symbol, "Li");
@@ -76,6 +92,11 @@ extern void table()
     atom[2].boilingpoint = 1615.15;
     atom[2].electronegativity = 0.98;
     atom[2].electronaffinity = 59.6;
+    strcpy(atom[2].casnumber, "CAS7439-93-2");
+    strcpy(atom[2].electronshell, "K2 L1 M0 N0 O0 P0 Q0 R0");
+    atom[2].electron = 3;
+    atom[2].proton = 3;
+    atom[2].neutron = 4;
 
     strcpy(atom[3].name, "Beryllium");
     strcpy(atom[3].symbol, "Be");
@@ -92,6 +113,11 @@ extern void table()
     atom[3].boilingpoint = 3243.15;
     atom[3].electronegativity = 1.57;
     atom[3].electronaffinity = 0;
+    strcpy(atom[3].casnumber, "CAS7440-41-7");
+    strcpy(atom[3].electronshell, "K2 L2 M0 N0 O0 P0 Q0 R0");
+    atom[3].electron = 4;
+    atom[3].proton = 4;
+    atom[3].neutron = 5;
 
     strcpy(atom[4].name, "Boron");
     strcpy(atom[4].symbol, "B");
@@ -108,6 +134,11 @@ extern void table()
     atom[4].boilingpoint = 4199.95;
     atom[4].electronegativity = 2.04;
     atom[4].electronaffinity = 26.7;
+    strcpy(atom[4].casnumber, "CAS7440-42-8");
+    strcpy(atom[4].electronshell, "K2 L3 M0 N0 O0 P0 Q0 R0");
+    atom[4].electron = 5;
+    atom[4].proton = 5;
+    atom[4].neutron = 6;
 
     strcpy(atom[5].name, "Carbon");
     strcpy(atom[5].symbol, "C");
@@ -124,6 +155,11 @@ extern void table()
     atom[5].boilingpoint = 5100.15;
     atom[5].electronegativity = 2.55;
     atom[5].electronaffinity = 153.9;
+    strcpy(atom[5].casnumber, "CAS7440-44-0");
+    strcpy(atom[5].electronshell, "K2 L4 M0 N0 O0 P0 Q0 R0");
+    atom[5].electron = 6;
+    atom[5].proton = 6;
+    atom[5].neutron = 6;
 
     strcpy(atom[6].name, "Nitrogen");
     strcpy(atom[6].symbol, "N");
@@ -140,6 +176,11 @@ extern void table()
     atom[6].boilingpoint = 77.35;
     atom[6].electronegativity = 3.04;
     atom[6].electronaffinity = 7;
+    strcpy(atom[6].casnumber, "CAS7727-37-9");
+    strcpy(atom[6].electronshell, "K2 L5 M0 N0 O0 P0 Q0 R0");
+    atom[6].electron = 7;
+    atom[6].proton = 7;
+    atom[6].neutron = 7;
 
     strcpy(atom[7].name, "Oxygen");
     strcpy(atom[7].symbol, "O");
@@ -156,6 +197,11 @@ extern void table()
     atom[7].boilingpoint = 90.19;
     atom[7].electronegativity = 3.44;
     atom[7].electronaffinity = 141;
+    strcpy(atom[7].casnumber, "CAS7787-44-7");
+    strcpy(atom[7].electronshell, "K2 L6 M0 N0 O0 P0 Q0 R0");
+    atom[7].electron = 8;
+    atom[7].proton = 8;
+    atom[7].neutron = 8;
 
     strcpy(atom[8].name, "Fluorine");
     strcpy(atom[8].symbol, "F");
@@ -172,6 +218,11 @@ extern void table()
     atom[8].boilingpoint = 85.04;
     atom[8].electronegativity = 3.98;
     atom[8].electronaffinity = 328;
+    strcpy(atom[8].casnumber, "CAS7782-41-4");
+    strcpy(atom[8].electronshell, "K2 L7 M0 N0 O0 P0 Q0 R0");
+    atom[8].electron = 9;
+    atom[8].proton = 9;
+    atom[8].neutron = 10;
 
     strcpy(atom[9].name, "Neon");
     strcpy(atom[9].symbol, "Ne");
@@ -188,6 +239,11 @@ extern void table()
     atom[9].boilingpoint = 27.1;
     atom[9].electronegativity = 0;
     atom[9].electronaffinity = 0;
+    strcpy(atom[9].casnumber, "CAS7440-01-9");
+    strcpy(atom[9].electronshell, "K2 L8 M0 N0 O0 P0 Q0 R0");
+    atom[9].electron = 10;
+    atom[9].proton = 10;
+    atom[9].neutron = 10;
 
     strcpy(atom[10].name, "Sodium");
     strcpy(atom[10].symbol, "Na");
@@ -204,6 +260,11 @@ extern void table()
     atom[10].boilingpoint = 1156.09;
     atom[10].electronegativity = 0.93;
     atom[10].electronaffinity = 52.8;
+    strcpy(atom[10].casnumber, "CAS7440-23-5");
+    strcpy(atom[10].electronshell, "K2 L8 M1 N0 O0 P0 Q0 R0");
+    atom[10].electron = 11;
+    atom[10].proton = 11;
+    atom[10].neutron = 12;
 
     strcpy(atom[11].name, "Magnesium");
     strcpy(atom[11].symbol, "Mg");
@@ -220,6 +281,11 @@ extern void table()
     atom[11].boilingpoint = 1363.15;
     atom[11].electronegativity = 1.31;
     atom[11].electronaffinity = 0;
+    strcpy(atom[11].casnumber, "CAS7439-95-4");
+    strcpy(atom[11].electronshell, "K2 L8 M2 N0 O0 P0 Q0 R0");
+    atom[11].electron = 12;
+    atom[11].proton = 12;
+    atom[11].neutron = 12;
 
     strcpy(atom[12].name, "Aluminium");
     strcpy(atom[12].symbol, "Al");
@@ -236,6 +302,11 @@ extern void table()
     atom[12].boilingpoint = 2791.97;
     atom[12].electronegativity = 1.61;
     atom[12].electronaffinity = 42.5;
+    strcpy(atom[12].casnumber, "CAS7429-90-5");
+    strcpy(atom[12].electronshell, "K2 L8 M3 N0 O0 P0 Q0 R0");
+    atom[12].electron = 13;
+    atom[12].proton = 13;
+    atom[12].neutron = 14;
 
     strcpy(atom[13].name, "Silicon");
     strcpy(atom[13].symbol, "Si");
@@ -252,6 +323,11 @@ extern void table()
     atom[13].boilingpoint = 3538.15;
     atom[13].electronegativity = 1.9;
     atom[13].electronaffinity = 133.6;
+    strcpy(atom[13].casnumber, "CAS7440-21-3");
+    strcpy(atom[13].electronshell, "K2 L8 M4 N0 O0 P0 Q0 R0");
+    atom[13].electron = 14;
+    atom[13].proton = 14;
+    atom[13].neutron = 42;
 
     strcpy(atom[14].name, "Phosphorus");
     strcpy(atom[14].symbol, "P");
@@ -268,6 +344,11 @@ extern void table()
     atom[14].boilingpoint = 553.65;
     atom[14].electronegativity = 2.19;
     atom[14].electronaffinity = 72;
+    strcpy(atom[14].casnumber, "CAS7723-14-0");
+    strcpy(atom[14].electronshell, "K2 L8 M5 N0 O0 P0 Q0 R0");
+    atom[14].electron = 15;
+    atom[14].proton = 15;
+    atom[14].neutron = 16;
 
     strcpy(atom[15].name, "Sulphur");
     strcpy(atom[15].symbol, "S");
@@ -284,6 +365,11 @@ extern void table()
     atom[15].boilingpoint = 717.82;
     atom[15].electronegativity = 2.58;
     atom[15].electronaffinity = 200;
+    strcpy(atom[15].casnumber, "CAS7704-34-9");
+    strcpy(atom[15].electronshell, "K2 L8 M6 N0 O0 P0 Q0 R0");
+    atom[15].electron = 16;
+    atom[15].proton = 16;
+    atom[15].neutron = 16;
 
     strcpy(atom[16].name, "Chlorine");
     strcpy(atom[16].symbol, "Cl");
@@ -300,6 +386,11 @@ extern void table()
     atom[16].boilingpoint = 238.55;
     atom[16].electronegativity = 3.16;
     atom[16].electronaffinity = 349;
+    strcpy(atom[16].casnumber, "CAS7782-50-5");
+    strcpy(atom[16].electronshell, "K2 L8 M7 N0 O0 P0 Q0 R0");
+    atom[16].electron = 17;
+    atom[16].proton = 17;
+    atom[16].neutron = 18;
 
     strcpy(atom[17].name, "Argon");
     strcpy(atom[17].symbol, "Ar");
@@ -316,6 +407,11 @@ extern void table()
     atom[17].boilingpoint = 87.3;
     atom[17].electronegativity = 0;
     atom[17].electronaffinity = 0;
+    strcpy(atom[17].casnumber, "CAS7440-37-1");
+    strcpy(atom[17].electronshell, "K2 L8 M8 N0 O0 P0 Q0 R0");
+    atom[17].electron = 18;
+    atom[17].proton = 18;
+    atom[17].neutron = 22;
 
     strcpy(atom[18].name, "Potassium");
     strcpy(atom[18].symbol, "K");
@@ -332,6 +428,11 @@ extern void table()
     atom[18].boilingpoint = 1031.95;
     atom[18].electronegativity = 0.82;
     atom[18].electronaffinity = 48.4;
+    strcpy(atom[18].casnumber, "CAS7440-09-7");
+    strcpy(atom[18].electronshell, "K2 L8 M8 N1 O0 P0 Q0 R0");
+    atom[18].electron = 19;
+    atom[18].proton = 19;
+    atom[18].neutron = 20;
 
     strcpy(atom[19].name, "Calcium");
     strcpy(atom[19].symbol, "Ca");
@@ -348,6 +449,11 @@ extern void table()
     atom[19].boilingpoint = 1757.15;
     atom[19].electronegativity = 1;
     atom[19].electronaffinity = 2.37;
+    strcpy(atom[19].casnumber, "CAS7440-70-2");
+    strcpy(atom[19].electronshell, "K2 L8 M8 N2 O0 P0 Q0 R0");
+    atom[19].electron = 20;
+    atom[19].proton = 20;
+    atom[19].neutron = 20;
 
     strcpy(atom[20].name, "Scandium");
     strcpy(atom[20].symbol, "Sc");
@@ -364,6 +470,11 @@ extern void table()
     atom[20].boilingpoint = 3109.15;
     atom[20].electronegativity = 1.36;
     atom[20].electronaffinity = 18.1;
+    strcpy(atom[20].casnumber, "CAS7440-20-2");
+    strcpy(atom[20].electronshell, "K2 L8 M9 N2 O0 P0 Q0 R0");
+    atom[20].electron = 21;
+    atom[20].proton = 21;
+    atom[20].neutron = 24;
 
     strcpy(atom[21].name, "Titanium");
     strcpy(atom[21].symbol, "Ti");
@@ -380,6 +491,11 @@ extern void table()
     atom[21].boilingpoint = 3560.15;
     atom[21].electronegativity = 1.54;
     atom[21].electronaffinity = 7.6;
+    strcpy(atom[21].casnumber, "CAS7440-32-6");
+    strcpy(atom[21].electronshell, "K2 L8 M10 N2 O0 P0 Q0 R0");
+    atom[21].electron = 22;
+    atom[21].proton = 22;
+    atom[21].neutron = 26;
 
     strcpy(atom[22].name, "Vanadium");
     strcpy(atom[22].symbol, "V");
@@ -396,6 +512,11 @@ extern void table()
     atom[22].boilingpoint = 3680.15;
     atom[22].electronegativity = 1.63;
     atom[22].electronaffinity = 50.6;
+    strcpy(atom[22].casnumber, "CAS7440-62-2");
+    strcpy(atom[22].electronshell, "K2 L8 M11 N2 O0 P0 Q0 R0");
+    atom[22].electron = 23;
+    atom[22].proton = 23;
+    atom[22].neutron = 28;
 
     strcpy(atom[23].name, "Chromium");
     strcpy(atom[23].symbol, "Cr");
@@ -412,6 +533,11 @@ extern void table()
     atom[23].boilingpoint = 2945.15;
     atom[23].electronegativity = 1.66;
     atom[23].electronaffinity = 64.3;
+    strcpy(atom[23].casnumber, "CAS7440-47-9");
+    strcpy(atom[23].electronshell, "K2 L8 M13 N1 O0 P0 Q0 R0");
+    atom[23].electron = 24;
+    atom[23].proton = 24;
+    atom[23].neutron = 28;
 
     strcpy(atom[24].name, "Manganese");
     strcpy(atom[24].symbol, "Mn");
@@ -428,6 +554,11 @@ extern void table()
     atom[24].boilingpoint = 2334.15;
     atom[24].electronegativity = 1.55;
     atom[24].electronaffinity = 0;
+    strcpy(atom[24].casnumber, "CAS7439-96-5");
+    strcpy(atom[24].electronshell, "K2 L8 M13 N2 O0 P0 Q0 R0");
+    atom[24].electron = 25;
+    atom[24].proton = 25;
+    atom[24].neutron = 30;
 
     strcpy(atom[25].name, "Iron");
     strcpy(atom[25].symbol, "Fe");
@@ -444,6 +575,11 @@ extern void table()
     atom[25].boilingpoint = 3135.15;
     atom[25].electronegativity = 1.83;
     atom[25].electronaffinity = 15.7;
+    strcpy(atom[25].casnumber, "CAS7439-89-6");
+    strcpy(atom[25].electronshell, "K2 L8 M14 N2 O0 P0 Q0 R0");
+    atom[25].electron = 26;
+    atom[25].proton = 26;
+    atom[25].neutron = 30;
 
     strcpy(atom[26].name, "Cobalt");
     strcpy(atom[26].symbol, "Co");
@@ -460,6 +596,11 @@ extern void table()
     atom[26].boilingpoint = 3143.15;
     atom[26].electronegativity = 1.88;
     atom[26].electronaffinity = 63.7;
+    strcpy(atom[26].casnumber, "CAS7440-48-4");
+    strcpy(atom[26].electronshell, "K2 L8 M15 N2 O0 P0 Q0 R0");
+    atom[26].electron = 27;
+    atom[26].proton = 27;
+    atom[26].neutron = 32;
 
     strcpy(atom[27].name, "Nickel");
     strcpy(atom[27].symbol, "Ni");
@@ -476,6 +617,11 @@ extern void table()
     atom[27].boilingpoint = 3188.15;
     atom[27].electronegativity = 1.91;
     atom[27].electronaffinity = 112;
+    strcpy(atom[27].casnumber, "CAS7440-02-0");
+    strcpy(atom[27].electronshell, "K2 L8 M16 N2 O0 P0 Q0 R0");
+    atom[27].electron = 28;
+    atom[27].proton = 28;
+    atom[27].neutron = 31;
 
     strcpy(atom[28].name, "Copper");
     strcpy(atom[28].symbol, "Cu");
@@ -492,6 +638,11 @@ extern void table()
     atom[28].boilingpoint = 2835.15;
     atom[28].electronegativity = 1.9;
     atom[28].electronaffinity = 118.4;
+    strcpy(atom[28].casnumber, "CAS7440-50-8");
+    strcpy(atom[28].electronshell, "K2 L8 M18 N1 O0 P0 Q0 R0");
+    atom[28].electron = 29;
+    atom[28].proton = 29;
+    atom[28].neutron = 35;
 
     strcpy(atom[29].name, "Zinc");
     strcpy(atom[29].symbol, "Zn");
@@ -508,6 +659,11 @@ extern void table()
     atom[29].boilingpoint = 1179.15;
     atom[29].electronegativity = 1.65;
     atom[29].electronaffinity = 0;
+    strcpy(atom[29].casnumber, "CAS7440-66-6");
+    strcpy(atom[29].electronshell, "K2 L8 M18 N2 O0 P0 Q0 R0");
+    atom[29].electron = 30;
+    atom[29].proton = 30;
+    atom[29].neutron = 35;
 
     strcpy(atom[30].name, "Gallium");
     strcpy(atom[30].symbol, "Ga");
@@ -524,6 +680,11 @@ extern void table()
     atom[30].boilingpoint = 2476.15;
     atom[30].electronegativity = 1.81;
     atom[30].electronaffinity = 28.9;
+    strcpy(atom[30].casnumber, "CAS7440-55-3");
+    strcpy(atom[30].electronshell, "K2 L8 M18 N3 O0 P0 Q0 R0");
+    atom[30].electron = 31;
+    atom[30].proton = 31;
+    atom[30].neutron = 39;
 
     strcpy(atom[31].name, "Germanium");
     strcpy(atom[31].symbol, "Ge");
@@ -540,6 +701,11 @@ extern void table()
     atom[31].boilingpoint = 3106.15;
     atom[31].electronegativity = 2.01;
     atom[31].electronaffinity = 119;
+    strcpy(atom[31].casnumber, "CAS7440-56-4");
+    strcpy(atom[31].electronshell, "K2 L8 M18 N4 O0 P0 Q0 R0");
+    atom[31].electron = 32;
+    atom[31].proton = 32;
+    atom[31].neutron = 41;
 
     strcpy(atom[32].name, "Arsenic");
     strcpy(atom[32].symbol, "As");
@@ -556,6 +722,11 @@ extern void table()
     atom[32].boilingpoint = 886.15;
     atom[32].electronegativity = 2.18;
     atom[32].electronaffinity = 78;
+    strcpy(atom[32].casnumber, "CAS7440-38-2");
+    strcpy(atom[32].electronshell, "K2 L8 M18 N5 O0 P0 Q0 R0");
+    atom[32].electron = 33;
+    atom[32].proton = 33;
+    atom[32].neutron = 42;
 
     strcpy(atom[33].name, "Selenium");
     strcpy(atom[33].symbol, "Se");
@@ -572,6 +743,11 @@ extern void table()
     atom[33].boilingpoint = 957.95;
     atom[33].electronegativity = 2.55;
     atom[33].electronaffinity = 195;
+    strcpy(atom[33].casnumber, "CAS7782-49-2");
+    strcpy(atom[33].electronshell, "K2 L8 M18 N6 O0 P0 Q0 R0");
+    atom[33].electron = 34;
+    atom[33].proton = 34;
+    atom[33].neutron = 45;
 
     strcpy(atom[34].name, "Bromine");
     strcpy(atom[34].symbol, "Br");
@@ -588,6 +764,11 @@ extern void table()
     atom[34].boilingpoint = 331.95;
     atom[34].electronegativity = 2.96;
     atom[34].electronaffinity = 324.6;
+    strcpy(atom[34].casnumber, "CAS7726-95-6");
+    strcpy(atom[34].electronshell, "K2 L8 M18 N7 O0 P0 Q0 R0");
+    atom[34].electron = 35;
+    atom[34].proton = 35;
+    atom[34].neutron = 45;
 
     strcpy(atom[35].name, "Krypton");
     strcpy(atom[35].symbol, "Kr");
@@ -604,6 +785,11 @@ extern void table()
     atom[35].boilingpoint = 119.75;
     atom[35].electronegativity = 3;
     atom[35].electronaffinity = 0;
+    strcpy(atom[35].casnumber, "CAS7439-90-9");
+    strcpy(atom[35].electronshell, "K2 L8 M18 N8 O0 P0 Q0 R0");
+    atom[35].electron = 36;
+    atom[35].proton = 36;
+    atom[35].neutron = 48;
 
     strcpy(atom[36].name, "Rubidium");
     strcpy(atom[36].symbol, "Rb");
@@ -620,6 +806,11 @@ extern void table()
     atom[36].boilingpoint = 960.35;
     atom[36].electronegativity = 0.82;
     atom[36].electronaffinity = 46.9;
+    strcpy(atom[36].casnumber, "CAS7440-17-7");
+    strcpy(atom[36].electronshell, "K2 L8 M18 N8 O1 P0 Q0 R0");
+    atom[36].electron = 37;
+    atom[36].proton = 37;
+    atom[36].neutron = 48;
 
     strcpy(atom[37].name, "Strontium");
     strcpy(atom[37].symbol, "Sr");
@@ -636,6 +827,11 @@ extern void table()
     atom[37].boilingpoint = 1655.15;
     atom[37].electronegativity = 0.95;
     atom[37].electronaffinity = 5.03;
+    strcpy(atom[37].casnumber, "CAS7440-24-6");
+    strcpy(atom[37].electronshell, "K2 L8 M18 N8 O2 P0 Q0 R0");
+    atom[37].electron = 38;
+    atom[37].proton = 38;
+    atom[37].neutron = 50;
 
     strcpy(atom[38].name, "Yttrium");
     strcpy(atom[38].symbol, "Y");
@@ -652,6 +848,11 @@ extern void table()
     atom[38].boilingpoint = 3611.15;
     atom[38].electronegativity = 1.22;
     atom[38].electronaffinity = 29.6;
+    strcpy(atom[38].casnumber, "CAS7440-65-5");
+    strcpy(atom[38].electronshell, "K2 L8 M18 N9 O2 P0 Q0 R0");
+    atom[38].electron = 39;
+    atom[38].proton = 39;
+    atom[38].neutron = 50;
 
     strcpy(atom[39].name, "Zirconium");
     strcpy(atom[39].symbol, "Zr");
@@ -668,6 +869,11 @@ extern void table()
     atom[39].boilingpoint = 4682.15;
     atom[39].electronegativity = 1.33;
     atom[39].electronaffinity = 41.1;
+    strcpy(atom[39].casnumber, "CAS7440-67-7");
+    strcpy(atom[39].electronshell, "K2 L8 M18 N10 O2 P0 Q0 R0");
+    atom[39].electron = 40;
+    atom[39].proton = 40;
+    atom[39].neutron = 51;
 
     strcpy(atom[40].name, "Niobium");
     strcpy(atom[40].symbol, "Nb");
@@ -684,6 +890,11 @@ extern void table()
     atom[40].boilingpoint = 5200.15;
     atom[40].electronegativity = 1.6;
     atom[40].electronaffinity = 86.1;
+    strcpy(atom[40].casnumber, "CAS7440-03-1");
+    strcpy(atom[40].electronshell, "K2 L8 M18 N12 O1 P0 Q0 R0");
+    atom[40].electron = 41;
+    atom[40].proton = 41;
+    atom[40].neutron = 52;
 
     strcpy(atom[41].name, "Molybdenum");
     strcpy(atom[41].symbol, "Mo");
@@ -700,6 +911,11 @@ extern void table()
     atom[41].boilingpoint = 4912.15;
     atom[41].electronegativity = 2.16;
     atom[41].electronaffinity = 71.9;
+    strcpy(atom[41].casnumber, "CAS7439-98-7");
+    strcpy(atom[41].electronshell, "K2 L8 M18 N13 O1 P0 Q0 R0");
+    atom[41].electron = 42;
+    atom[41].proton = 42;
+    atom[41].neutron = 54;
 
     strcpy(atom[42].name, "Technetium");
     strcpy(atom[42].symbol, "Tc");
@@ -716,6 +932,11 @@ extern void table()
     atom[42].boilingpoint = 4538.15;
     atom[42].electronegativity = 1.9;
     atom[42].electronaffinity = 53;
+    strcpy(atom[42].casnumber, "CAS7440-26-8");
+    strcpy(atom[42].electronshell, "K2 L8 M18 N13 O2 P0 Q0 R0");
+    atom[42].electron = 43;
+    atom[42].proton = 43;
+    atom[42].neutron = 55;
 
     strcpy(atom[43].name, "Ruthenium");
     strcpy(atom[43].symbol, "Ru");
@@ -732,6 +953,11 @@ extern void table()
     atom[43].boilingpoint = 4350.15;
     atom[43].electronegativity = 2.2;
     atom[43].electronaffinity = 101.3;
+    strcpy(atom[43].casnumber, "CAS7440-18-8");
+    strcpy(atom[43].electronshell, "K2 L8 M18 N15 O1 P0 Q0 R0");
+    atom[43].electron = 44;
+    atom[43].proton = 44;
+    atom[43].neutron = 57;
 
     strcpy(atom[44].name, "Rhodium");
     strcpy(atom[44].symbol, "Rh");
@@ -748,6 +974,11 @@ extern void table()
     atom[44].boilingpoint = 4000.15;
     atom[44].electronegativity = 2.28;
     atom[44].electronaffinity = 109.7;
+    strcpy(atom[44].casnumber, "CAS7440-16-6");
+    strcpy(atom[44].electronshell, "K2 L8 M18 N16 O1 P0 Q0 R0");
+    atom[44].electron = 45;
+    atom[44].proton = 45;
+    atom[44].neutron = 57;
 
     strcpy(atom[45].name, "Palladium");
     strcpy(atom[45].symbol, "Pd");
@@ -764,6 +995,11 @@ extern void table()
     atom[45].boilingpoint = 3236.15;
     atom[45].electronegativity = 2.2;
     atom[45].electronaffinity = 53.7;
+    strcpy(atom[45].casnumber, "CAS7440-05-3");
+    strcpy(atom[45].electronshell, "K2 L8 M18 N18 O0 P0 Q0 R0");
+    atom[45].electron = 46;
+    atom[45].proton = 46;
+    atom[45].neutron = 60;
 
     strcpy(atom[46].name, "Silver");
     strcpy(atom[46].symbol, "Ag");
@@ -780,6 +1016,11 @@ extern void table()
     atom[46].boilingpoint = 2435.15;
     atom[46].electronegativity = 1.93;
     atom[46].electronaffinity = 125.6;
+    strcpy(atom[46].casnumber, "CAS7440-22-4");
+    strcpy(atom[46].electronshell, "K2 L8 M18 N18 O1 P0 Q0 R0");
+    atom[46].electron = 47;
+    atom[46].proton = 47;
+    atom[46].neutron = 61;
 
     strcpy(atom[47].name, "Cadmium");
     strcpy(atom[47].symbol, "Cd");
@@ -796,6 +1037,11 @@ extern void table()
     atom[47].boilingpoint = 1039.95;
     atom[47].electronegativity = 1.69;
     atom[47].electronaffinity = 0;
+    strcpy(atom[47].casnumber, "CAS7440-43-9");
+    strcpy(atom[47].electronshell, "K2 L8 M18 N18 O2 P0 Q0 R0");
+    atom[47].electron = 48;
+    atom[47].proton = 48;
+    atom[47].neutron = 64;
 
     strcpy(atom[48].name, "Indium");
     strcpy(atom[48].symbol, "In");
@@ -812,6 +1058,11 @@ extern void table()
     atom[48].boilingpoint = 2345.15;
     atom[48].electronegativity = 1.78;
     atom[48].electronaffinity = 28.9;
+    strcpy(atom[48].casnumber, "CAS7440-74-6");
+    strcpy(atom[48].electronshell, "K2 L8 M18 N18 O3 P0 Q0 R0");
+    atom[48].electron = 49;
+    atom[48].proton = 49;
+    atom[48].neutron = 66;
 
     strcpy(atom[49].name, "Tin");
     strcpy(atom[49].symbol, "Sn");
@@ -828,6 +1079,11 @@ extern void table()
     atom[49].boilingpoint = 2875.15;
     atom[49].electronegativity = 1.96;
     atom[49].electronaffinity = 107.3;
+    strcpy(atom[49].casnumber, "CAS7440-31-5");
+    strcpy(atom[49].electronshell, "K2 L8 M18 N18 O4 P0 Q0 R0");
+    atom[49].electron = 50;
+    atom[49].proton = 50;
+    atom[49].neutron = 69;
 
     strcpy(atom[50].name, "Antimony");
     strcpy(atom[50].symbol, "Sb");
@@ -844,6 +1100,11 @@ extern void table()
     atom[50].boilingpoint = 1860.15;
     atom[50].electronegativity = 2.05;
     atom[50].electronaffinity = 103.2;
+    strcpy(atom[50].casnumber, "CAS7440-36-0");
+    strcpy(atom[50].electronshell, "K2 L8 M18 N18 O5 P0 Q0 R0");
+    atom[50].electron = 51;
+    atom[50].proton = 51;
+    atom[50].neutron = 71;
 
     strcpy(atom[51].name, "Tellurium");
     strcpy(atom[51].symbol, "Te");
@@ -860,6 +1121,11 @@ extern void table()
     atom[51].boilingpoint = 1260.95;
     atom[51].electronegativity = 2.1;
     atom[51].electronaffinity = 190.2;
+    strcpy(atom[51].casnumber, "CAS13494-80-9");
+    strcpy(atom[51].electronshell, "K2 L8 M18 N18 O6 P0 Q0 R0");
+    atom[51].electron = 52;
+    atom[51].proton = 52;
+    atom[51].neutron = 75;
 
     strcpy(atom[52].name, "Iodine");
     strcpy(atom[52].symbol, "I");
@@ -876,6 +1142,11 @@ extern void table()
     atom[52].boilingpoint = 457.5;
     atom[52].electronegativity = 2.66;
     atom[52].electronaffinity = 295.2;
+    strcpy(atom[52].casnumber, "CAS7553-56-2");
+    strcpy(atom[52].electronshell, "K2 L8 M18 N18 O7 P0 Q0 R0");
+    atom[52].electron = 53;
+    atom[52].proton = 53;
+    atom[52].neutron = 74;
 
     strcpy(atom[53].name, "Xenon");
     strcpy(atom[53].symbol, "Xe");
@@ -892,6 +1163,11 @@ extern void table()
     atom[53].boilingpoint = 165.05;
     atom[53].electronegativity = 2.6;
     atom[53].electronaffinity = 0;
+    strcpy(atom[53].casnumber, "CAS7440-63-3");
+    strcpy(atom[53].electronshell, "K2 L8 M18 N18 O8 P0 Q0 R0");
+    atom[53].electron = 54;
+    atom[53].proton = 54;
+    atom[53].neutron = 77;
 
     strcpy(atom[54].name, "Caesium");
     strcpy(atom[54].symbol, "Cs");
@@ -908,6 +1184,11 @@ extern void table()
     atom[54].boilingpoint = 943.95;
     atom[54].electronegativity = 0.79;
     atom[54].electronaffinity = 45.5;
+    strcpy(atom[54].casnumber, "CAS7440-46-2");
+    strcpy(atom[54].electronshell, "K2 L8 M18 N18 O8 P1 Q0 R0");
+    atom[54].electron = 55;
+    atom[54].proton = 55;
+    atom[54].neutron = 78;
 
     strcpy(atom[55].name, "Barium");
     strcpy(atom[55].symbol, "Ba");
@@ -924,6 +1205,11 @@ extern void table()
     atom[55].boilingpoint = 2170.15;
     atom[55].electronegativity = 0.89;
     atom[55].electronaffinity = 13.95;
+    strcpy(atom[55].casnumber, "CAS7440-39-3");
+    strcpy(atom[55].electronshell, "K2 L8 M18 N18 O8 P2 Q0 R0");
+    atom[55].electron = 56;
+    atom[55].proton = 56;
+    atom[55].neutron = 81;
 
     strcpy(atom[56].name, "Lanthanum");
     strcpy(atom[56].symbol, "La");
@@ -940,6 +1226,11 @@ extern void table()
     atom[56].boilingpoint = 3737.15;
     atom[56].electronegativity = 1.1;
     atom[56].electronaffinity = 48;
+    strcpy(atom[56].casnumber, "CAS7439-91-0");
+    strcpy(atom[56].electronshell, "K2 L8 M18 N18 O9 P2 Q0 R0");
+    atom[56].electron = 57;
+    atom[56].proton = 57;
+    atom[56].neutron = 82;
 
     strcpy(atom[57].name, "Cerium");
     strcpy(atom[57].symbol, "Ce");
@@ -956,6 +1247,11 @@ extern void table()
     atom[57].boilingpoint = 3716.15;
     atom[57].electronegativity = 1.12;
     atom[57].electronaffinity = 50;
+    strcpy(atom[57].casnumber, "CAS7440-45-1");
+    strcpy(atom[57].electronshell, "K2 L8 M18 N19 O9 P2 Q0 R0");
+    atom[57].electron = 58;
+    atom[57].proton = 58;
+    atom[57].neutron = 82;
 
     strcpy(atom[58].name, "Praseodymium");
     strcpy(atom[58].symbol, "Pr");
@@ -972,6 +1268,11 @@ extern void table()
     atom[58].boilingpoint = 3785.15;
     atom[58].electronegativity = 1.13;
     atom[58].electronaffinity = 50;
+    strcpy(atom[58].casnumber, "CAS7440-10-0");
+    strcpy(atom[58].electronshell, "K2 L8 M18 N21 O8 P2 Q0 R0");
+    atom[58].electron = 59;
+    atom[58].proton = 59;
+    atom[58].neutron = 82;
 
     strcpy(atom[59].name, "Neodumium");
     strcpy(atom[59].symbol, "Nd");
@@ -988,6 +1289,11 @@ extern void table()
     atom[59].boilingpoint = 3347.15;
     atom[59].electronegativity = 1.14;
     atom[59].electronaffinity = 50;
+    strcpy(atom[59].casnumber, "CAS7440-00-8");
+    strcpy(atom[59].electronshell, "K2 L8 M18 N22 O8 P2 Q0 R0");
+    atom[59].electron = 60;
+    atom[59].proton = 60;
+    atom[59].neutron = 84;
 
     strcpy(atom[60].name, "Promethium");
     strcpy(atom[60].symbol, "Pm");
@@ -1004,6 +1310,11 @@ extern void table()
     atom[60].boilingpoint = 3273.15;
     atom[60].electronegativity = 0;
     atom[60].electronaffinity = 50;
+    strcpy(atom[60].casnumber, "CAS7440-12-2");
+    strcpy(atom[60].electronshell, "K2 L8 M18 N23 O8 P2 Q0 R0");
+    atom[60].electron = 61;
+    atom[60].proton = 61;
+    atom[60].neutron = 84;
 
     strcpy(atom[61].name, "Samarium");
     strcpy(atom[61].symbol, "Sm");
@@ -1020,6 +1331,11 @@ extern void table()
     atom[61].boilingpoint = 2067.15;
     atom[61].electronegativity = 1.1;
     atom[61].electronaffinity = 50;
+    strcpy(atom[61].casnumber, "CAS7440-19-9");
+    strcpy(atom[61].electronshell, "K2 L8 M18 N24 O8 P2 Q0 R0");
+    atom[61].electron = 62;
+    atom[61].proton = 62;
+    atom[61].neutron = 88;
 
     strcpy(atom[62].name, "Europium");
     strcpy(atom[62].symbol, "Eu");
@@ -1036,6 +1352,11 @@ extern void table()
     atom[62].boilingpoint = 1870.15;
     atom[62].electronegativity = 0;
     atom[62].electronaffinity = 50;
+    strcpy(atom[62].casnumber, "CAS7440-53-1");
+    strcpy(atom[62].electronshell, "K2 L8 M18 N25 O8 P2 Q0 R0");
+    atom[62].electron = 63;
+    atom[62].proton = 63;
+    atom[62].neutron = 89;
 
     strcpy(atom[63].name, "Gadolinium");
     strcpy(atom[63].symbol, "Gd");
@@ -1052,6 +1373,11 @@ extern void table()
     atom[63].boilingpoint = 3545.15;
     atom[63].electronegativity = 1.2;
     atom[63].electronaffinity = 50;
+    strcpy(atom[63].casnumber, "CAS7440-54-2");
+    strcpy(atom[63].electronshell, "K2 L8 M18 N25 O9 P2 Q0 R0");
+    atom[63].electron = 64;
+    atom[63].proton = 64;
+    atom[63].neutron = 93;
 
     strcpy(atom[64].name, "Terbium");
     strcpy(atom[64].symbol, "Tb");
@@ -1068,6 +1394,11 @@ extern void table()
     atom[64].boilingpoint = 3500.15;
     atom[64].electronegativity = 0;
     atom[64].electronaffinity = 50;
+    strcpy(atom[64].casnumber, "CAS7440-27-9");
+    strcpy(atom[64].electronshell, "K2 L8 M18 N27 O8 P2 Q0 R0");
+    atom[64].electron = 65;
+    atom[64].proton = 65;
+    atom[64].neutron = 94;
 
     strcpy(atom[65].name, "Dysprosium");
     strcpy(atom[65].symbol, "Dy");
@@ -1084,6 +1415,11 @@ extern void table()
     atom[65].boilingpoint = 2840.15;
     atom[65].electronegativity = 1.22;
     atom[65].electronaffinity = 50;
+    strcpy(atom[65].casnumber, "CAS7429-91-6");
+    strcpy(atom[65].electronshell, "K2 L8 M18 N28 O8 P2 Q0 R0");
+    atom[65].electron = 66;
+    atom[65].proton = 66;
+    atom[65].neutron = 96;
 
     strcpy(atom[66].name, "Holmium");
     strcpy(atom[66].symbol, "Ho");
@@ -1100,6 +1436,11 @@ extern void table()
     atom[66].boilingpoint = 2968.15;
     atom[66].electronegativity = 1.23;
     atom[66].electronaffinity = 50;
+    strcpy(atom[66].casnumber, "CAS7440-60-0");
+    strcpy(atom[66].electronshell, "K2 L8 M18 N29 O8 P2 Q0 R0");
+    atom[66].electron = 67;
+    atom[66].proton = 67;
+    atom[66].neutron = 98;
 
     strcpy(atom[67].name, "Erbium");
     strcpy(atom[67].symbol, "Er");
@@ -1116,6 +1457,11 @@ extern void table()
     atom[67].boilingpoint = 3140.15;
     atom[67].electronegativity = 1.24;
     atom[67].electronaffinity = 50;
+    strcpy(atom[67].casnumber, "CAS7440-52-0");
+    strcpy(atom[67].electronshell, "K2 L8 M18 N30 O8 P2 Q0 R0");
+    atom[67].electron = 68;
+    atom[67].proton = 68;
+    atom[67].neutron = 99;
 
     strcpy(atom[68].name, "Thulium");
     strcpy(atom[68].symbol, "Tm");
@@ -1132,6 +1478,11 @@ extern void table()
     atom[68].boilingpoint = 2220.15;
     atom[68].electronegativity = 1.25;
     atom[68].electronaffinity = 50;
+    strcpy(atom[68].casnumber, "CAS7440-30-4");
+    strcpy(atom[68].electronshell, "K2 L8 M18 N31 O8 P2 Q0 R0");
+    atom[68].electron = 69;
+    atom[68].proton = 69;
+    atom[68].neutron = 100;
 
     strcpy(atom[69].name, "Ytterbium");
     strcpy(atom[69].symbol, "Yb");
@@ -1148,6 +1499,11 @@ extern void table()
     atom[69].boilingpoint = 1466.15;
     atom[69].electronegativity = 0;
     atom[69].electronaffinity = 50;
+    strcpy(atom[69].casnumber, "CAS7440-64-4");
+    strcpy(atom[69].electronshell, "K2 L8 M18 N32 O8 P2 Q0 R0");
+    atom[69].electron = 70;
+    atom[69].proton = 70;
+    atom[69].neutron = 103;
 
     strcpy(atom[70].name, "Lutetium");
     strcpy(atom[70].symbol, "Lu");
@@ -1164,6 +1520,11 @@ extern void table()
     atom[70].boilingpoint = 3668.15;
     atom[70].electronegativity = 1.27;
     atom[70].electronaffinity = 50;
+    strcpy(atom[70].casnumber, "CAS7439-94-3");
+    strcpy(atom[70].electronshell, "K2 L8 M18 N32 O9 P2 Q0 R0");
+    atom[70].electron = 71;
+    atom[70].proton = 71;
+    atom[70].neutron = 104;
 
     strcpy(atom[71].name, "Hafnium");
     strcpy(atom[71].symbol, "Hf");
@@ -1180,6 +1541,11 @@ extern void table()
     atom[71].boilingpoint = 4875.15;
     atom[71].electronegativity = 1.3;
     atom[71].electronaffinity = 0;
+    strcpy(atom[71].casnumber, "CAS7440-58-6");
+    strcpy(atom[71].electronshell, "K2 L8 M18 N32 O10 P2 Q0 R0");
+    atom[71].electron = 72;
+    atom[71].proton = 72;
+    atom[71].neutron = 106;
 
     strcpy(atom[72].name, "Tantalum");
     strcpy(atom[72].symbol, "Ta");
@@ -1196,6 +1562,11 @@ extern void table()
     atom[72].boilingpoint = 5731.15;
     atom[72].electronegativity = 1.5;
     atom[72].electronaffinity = 31;
+    strcpy(atom[72].casnumber, "CAS7440-25-7");
+    strcpy(atom[72].electronshell, "K2 L8 M18 N32 O11 P2 Q0 R0");
+    atom[72].electron = 73;
+    atom[72].proton = 73;
+    atom[72].neutron = 108;
 
     strcpy(atom[73].name, "Tungsten");
     strcpy(atom[73].symbol, "W");
@@ -1212,6 +1583,11 @@ extern void table()
     atom[73].boilingpoint = 5828.15;
     atom[73].electronegativity = 2.36;
     atom[73].electronaffinity = 78.6;
+    strcpy(atom[73].casnumber, "CAS7440-33-7");
+    strcpy(atom[73].electronshell, "K2 L8 M18 N32 O12 P2 Q0 R0");
+    atom[73].electron = 74;
+    atom[73].proton = 74;
+    atom[73].neutron = 110;
 
     strcpy(atom[74].name, "Rhenium");
     strcpy(atom[74].symbol, "Re");
@@ -1228,6 +1604,11 @@ extern void table()
     atom[74].boilingpoint = 5900.15;
     atom[74].electronegativity = 1.9;
     atom[74].electronaffinity = 14.5;
+    strcpy(atom[74].casnumber, "CAS7440-15-5");
+    strcpy(atom[74].electronshell, "K2 L8 M18 N32 O13 P2 Q0 R0");
+    atom[74].electron = 75;
+    atom[74].proton = 75;
+    atom[74].neutron = 111;
 
     strcpy(atom[75].name, "Osmium");
     strcpy(atom[75].symbol, "Os");
@@ -1244,6 +1625,11 @@ extern void table()
     atom[75].boilingpoint = 5870.15;
     atom[75].electronegativity = 2.2;
     atom[75].electronaffinity = 106.1;
+    strcpy(atom[75].casnumber, "CAS7440-04-2");
+    strcpy(atom[75].electronshell, "K2 L8 M18 N32 O14 P2 Q0 R0");
+    atom[75].electron = 76;
+    atom[75].proton = 76;
+    atom[75].neutron = 114;
 
     strcpy(atom[76].name, "Iridium");
     strcpy(atom[76].symbol, "Ir");
@@ -1260,6 +1646,11 @@ extern void table()
     atom[76].boilingpoint = 4403.15;
     atom[76].electronegativity = 2.2;
     atom[76].electronaffinity = 151;
+    strcpy(atom[76].casnumber, "CAS7439-88-5");
+    strcpy(atom[76].electronshell, "K2 L8 M18 N32 O15 P2 Q0 R0");
+    atom[76].electron = 77;
+    atom[76].proton = 77;
+    atom[76].neutron = 115;
 
     strcpy(atom[77].name, "Platinum");
     strcpy(atom[77].symbol, "Pt");
@@ -1276,6 +1667,11 @@ extern void table()
     atom[77].boilingpoint = 4098.15;
     atom[77].electronegativity = 2.28;
     atom[77].electronaffinity = 205.3;
+    strcpy(atom[77].casnumber, "CAS7440-06-4");
+    strcpy(atom[77].electronshell, "K2 L8 M18 N32 O17 P1 Q0 R0");
+    atom[77].electron = 78;
+    atom[77].proton = 78;
+    atom[77].neutron = 117;
 
     strcpy(atom[78].name, "Gold");
     strcpy(atom[78].symbol, "Au");
@@ -1292,6 +1688,11 @@ extern void table()
     atom[78].boilingpoint = 2973.15;
     atom[78].electronegativity = 2.54;
     atom[78].electronaffinity = 222.8;
+    strcpy(atom[78].casnumber, "CAS7440-57-5");
+    strcpy(atom[78].electronshell, "K2 L8 M18 N32 O18 P1 Q0 R0");
+    atom[78].electron = 79;
+    atom[78].proton = 79;
+    atom[78].neutron = 118;
 
     strcpy(atom[79].name, "Mercury");
     strcpy(atom[79].symbol, "Hg");
@@ -1308,6 +1709,11 @@ extern void table()
     atom[79].boilingpoint = 629.85;
     atom[79].electronegativity = 2;
     atom[79].electronaffinity = 0;
+    strcpy(atom[79].casnumber, "CAS7439-97-6");
+    strcpy(atom[79].electronshell, "K2 L8 M18 N32 O18 P2 Q0 R0");
+    atom[79].electron = 80;
+    atom[79].proton = 80;
+    atom[79].neutron = 120;
 
     strcpy(atom[80].name, "Thallium");
     strcpy(atom[80].symbol, "Tl");
@@ -1324,6 +1730,11 @@ extern void table()
     atom[80].boilingpoint = 1746.15;
     atom[80].electronegativity = 1.62;
     atom[80].electronaffinity = 19.2;
+    strcpy(atom[80].casnumber, "CAS7440-28-0");
+    strcpy(atom[80].electronshell, "K2 L8 M18 N32 O18 P3 Q0 R0");
+    atom[80].electron = 81;
+    atom[80].proton = 81;
+    atom[80].neutron = 123;
 
     strcpy(atom[81].name, "Lead");
     strcpy(atom[81].symbol, "Pb");
@@ -1340,6 +1751,11 @@ extern void table()
     atom[81].boilingpoint = 2022.15;
     atom[81].electronegativity = 2.33;
     atom[81].electronaffinity = 35.1;
+    strcpy(atom[81].casnumber, "CAS7439-92-1");
+    strcpy(atom[81].electronshell, "K2 L8 M18 N32 O18 P4 Q0 R0");
+    atom[81].electron = 82;
+    atom[81].proton = 82;
+    atom[81].neutron = 125;
 
     strcpy(atom[82].name, "Bismuth");
     strcpy(atom[82].symbol, "Bi");
@@ -1356,6 +1772,11 @@ extern void table()
     atom[82].boilingpoint = 1833.15;
     atom[82].electronegativity = 2.02;
     atom[82].electronaffinity = 91.2;
+    strcpy(atom[82].casnumber, "CAS7440-69-9");
+    strcpy(atom[82].electronshell, "K2 L8 M18 N32 O18 P5 Q0 R0");
+    atom[82].electron = 83;
+    atom[82].proton = 83;
+    atom[82].neutron = 126;
 
     strcpy(atom[83].name, "Polonium");
     strcpy(atom[83].symbol, "Po");
@@ -1372,6 +1793,11 @@ extern void table()
     atom[83].boilingpoint = 1235.15;
     atom[83].electronegativity = 2;
     atom[83].electronaffinity = 183.3;
+    strcpy(atom[83].casnumber, "CAS7440-08-6");
+    strcpy(atom[83].electronshell, "K2 L8 M18 N32 O18 P6 Q0 R0");
+    atom[83].electron = 84;
+    atom[83].proton = 84;
+    atom[83].neutron = 125;
 
     strcpy(atom[84].name, "Astatine");
     strcpy(atom[84].symbol, "At");
@@ -1388,6 +1814,11 @@ extern void table()
     atom[84].boilingpoint = 609.95;
     atom[84].electronegativity = 2.2;
     atom[84].electronaffinity = 270.1;
+    strcpy(atom[84].casnumber, "CAS7440-68-8");
+    strcpy(atom[84].electronshell, "K2 L8 M18 N32 O18 P7 Q0 R0");
+    atom[84].electron = 85;
+    atom[84].proton = 85;
+    atom[84].neutron = 125;
 
     strcpy(atom[85].name, "Radon");
     strcpy(atom[85].symbol, "Rn");
@@ -1404,6 +1835,11 @@ extern void table()
     atom[85].boilingpoint = 211.45;
     atom[85].electronegativity = 0;
     atom[85].electronaffinity = 0;
+    strcpy(atom[85].casnumber, "CAS10043-92-2");
+    strcpy(atom[85].electronshell, "K2 L8 M18 N32 O18 P8 Q0 R0");
+    atom[85].electron = 86;
+    atom[85].proton = 86;
+    atom[85].neutron = 136;
 
     strcpy(atom[86].name, "Francium");
     strcpy(atom[86].symbol, "Fr");
@@ -1420,6 +1856,11 @@ extern void table()
     atom[86].boilingpoint = 949.95;
     atom[86].electronegativity = 0.7;
     atom[86].electronaffinity = 1;
+    strcpy(atom[86].casnumber, "CAS7440-73-5");
+    strcpy(atom[86].electronshell, "K2 L8 M18 N32 O18 P8 Q1 R0");
+    atom[86].electron = 87;
+    atom[86].proton = 87;
+    atom[86].neutron = 136;
 
     strcpy(atom[87].name, "Radium");
     strcpy(atom[87].symbol, "Ra");
@@ -1436,6 +1877,11 @@ extern void table()
     atom[87].boilingpoint = 2010.15;
     atom[87].electronegativity = 0.9;
     atom[87].electronaffinity = 2;
+    strcpy(atom[87].casnumber, "CAS7440-14-4");
+    strcpy(atom[87].electronshell, "K2 L8 M18 N32 O18 P8 Q2 R0");
+    atom[87].electron = 88;
+    atom[87].proton = 88;
+    atom[87].neutron = 138;
 
     strcpy(atom[88].name, "Actinium");
     strcpy(atom[88].symbol, "Ac");
@@ -1452,6 +1898,11 @@ extern void table()
     atom[88].boilingpoint = 3470.15;
     atom[88].electronegativity = 1.1;
     atom[88].electronaffinity = 0;
+    strcpy(atom[88].casnumber, "CAS7440-34-8");
+    strcpy(atom[88].electronshell, "K2 L8 M18 N32 O18 P9 Q2 R0");
+    atom[88].electron = 89;
+    atom[88].proton = 89;
+    atom[88].neutron = 138;
 
     strcpy(atom[89].name, "Thorium");
     strcpy(atom[89].symbol, "Th");
@@ -1468,6 +1919,11 @@ extern void table()
     atom[89].boilingpoint = 5060.15;
     atom[89].electronegativity = 1.3;
     atom[89].electronaffinity = 0;
+    strcpy(atom[89].casnumber, "CAS7440-29-1");
+    strcpy(atom[89].electronshell, "K2 L8 M18 N32 O18 P10 Q2 R0");
+    atom[89].electron = 90;
+    atom[89].proton = 90;
+    atom[89].neutron = 142;
 
     strcpy(atom[90].name, "Protactinium");
     strcpy(atom[90].symbol, "Pa");
@@ -1484,6 +1940,11 @@ extern void table()
     atom[90].boilingpoint = 4300.15;
     atom[90].electronegativity = 1.5;
     atom[90].electronaffinity = 0;
+    strcpy(atom[90].casnumber, "CAS7440-13-3");
+    strcpy(atom[90].electronshell, "K2 L8 M18 N32 O20 P9 Q2 R0");
+    atom[90].electron = 91;
+    atom[90].proton = 91;
+    atom[90].neutron = 140;
 
     strcpy(atom[91].name, "Uranium");
     strcpy(atom[91].symbol, "U");
@@ -1500,6 +1961,11 @@ extern void table()
     atom[91].boilingpoint = 4404.15;
     atom[91].electronegativity = 1.38;
     atom[91].electronaffinity = 0;
+    strcpy(atom[91].casnumber, "CAS7440-61-1");
+    strcpy(atom[91].electronshell, "K2 L8 M18 N32 O21 P9 Q2 R0");
+    atom[91].electron = 92;
+    atom[91].proton = 92;
+    atom[91].neutron = 146;
 
     strcpy(atom[92].name, "Neptunium");
     strcpy(atom[92].symbol, "Np");
@@ -1516,6 +1982,11 @@ extern void table()
     atom[92].boilingpoint = 4175.15;
     atom[92].electronegativity = 1.36;
     atom[92].electronaffinity = 0;
+    strcpy(atom[92].casnumber, "CAS7439-99-8");
+    strcpy(atom[92].electronshell, "K2 L8 M18 N32 O22 P9 Q2 R0");
+    atom[92].electron = 93;
+    atom[92].proton = 93;
+    atom[92].neutron = 144;
 
     strcpy(atom[93].name, "Plutonium");
     strcpy(atom[93].symbol, "Pu");
@@ -1532,6 +2003,11 @@ extern void table()
     atom[93].boilingpoint = 3505.15;
     atom[93].electronegativity = 1.28;
     atom[93].electronaffinity = 0;
+    strcpy(atom[93].casnumber, "CAS7440-07-5");
+    strcpy(atom[93].electronshell, "K2 L8 M18 N32 O24 P8 Q2 R0");
+    atom[93].electron = 94;
+    atom[93].proton = 94;
+    atom[93].neutron = 150;
 
     strcpy(atom[94].name, "Americium");
     strcpy(atom[94].symbol, "Am");
@@ -1548,6 +2024,11 @@ extern void table()
     atom[94].boilingpoint = 2880.15;
     atom[94].electronegativity = 1.3;
     atom[94].electronaffinity = 0;
+    strcpy(atom[94].casnumber, "CAS7440-35-9");
+    strcpy(atom[94].electronshell, "K2 L8 M18 N32 O25 P9 Q2 R0");
+    atom[94].electron = 95;
+    atom[94].proton = 95;
+    atom[94].neutron = 148;
 
     strcpy(atom[95].name, "Curium");
     strcpy(atom[95].symbol, "Cm");
@@ -1564,6 +2045,11 @@ extern void table()
     atom[95].boilingpoint = 3383.15;
     atom[95].electronegativity = 1.3;
     atom[95].electronaffinity = 0;
+    strcpy(atom[95].casnumber, "CAS7440-51-9");
+    strcpy(atom[95].electronshell, "K2 L8 M18 N32 O25 P9 Q2 R0");
+    atom[95].electron = 96;
+    atom[95].proton = 96;
+    atom[95].neutron = 151;
 
     strcpy(atom[96].name, "Berkelium");
     strcpy(atom[96].symbol, "Bk");
@@ -1580,6 +2066,11 @@ extern void table()
     atom[96].boilingpoint = 2900.15;
     atom[96].electronegativity = 1.3;
     atom[96].electronaffinity = 0;
+    strcpy(atom[96].casnumber, "CAS7440-40-6");
+    strcpy(atom[96].electronshell, "K2 L8 M18 N32 O27 P8 Q2 R0");
+    atom[96].electron = 97;
+    atom[96].proton = 97;
+    atom[96].neutron = 150;
 
     strcpy(atom[97].name, "Californium");
     strcpy(atom[97].symbol, "Cf");
@@ -1596,6 +2087,11 @@ extern void table()
     atom[97].boilingpoint = 1745.15;
     atom[97].electronegativity = 1.3;
     atom[97].electronaffinity = 0;
+    strcpy(atom[97].casnumber, "CAS7440-71-3");
+    strcpy(atom[97].electronshell, "K2 L8 M18 N32 O28 P8 Q2 R0");
+    atom[97].electron = 98;
+    atom[97].proton = 98;
+    atom[97].neutron = 153;
 
     strcpy(atom[98].name, "Einsteinium");
     strcpy(atom[98].symbol, "Es");
@@ -1612,6 +2108,11 @@ extern void table()
     atom[98].boilingpoint = 0;
     atom[98].electronegativity = 1.3;
     atom[98].electronaffinity = 0;
+    strcpy(atom[98].casnumber, "CAS7429-92-7");
+    strcpy(atom[98].electronshell, "K2 L8 M18 N32 O29 P8 Q2 R0");
+    atom[98].electron = 99;
+    atom[98].proton = 99;
+    atom[98].neutron = 153;
 
     strcpy(atom[99].name, "Fermium");
     strcpy(atom[99].symbol, "Fm");
@@ -1628,6 +2129,11 @@ extern void table()
     atom[99].boilingpoint = 0;
     atom[99].electronegativity = 1.3;
     atom[99].electronaffinity = 0;
+    strcpy(atom[99].casnumber, "CAS7440-72-4");
+    strcpy(atom[99].electronshell, "K2 L8 M18 N32 O30 P8 Q2 R0");
+    atom[99].electron = 100;
+    atom[99].proton = 100;
+    atom[99].neutron = 157;
 
     strcpy(atom[100].name, "Mendelevium");
     strcpy(atom[100].symbol, "Md");
@@ -1644,6 +2150,11 @@ extern void table()
     atom[100].boilingpoint = 0;
     atom[100].electronegativity = 1.3;
     atom[100].electronaffinity = 0;
+    strcpy(atom[100].casnumber, "CAS7440-62-2");
+    strcpy(atom[100].electronshell, "K2 L8 M18 N32 O31 P8 Q2 R0");
+    atom[100].electron = 101;
+    atom[100].proton = 101;
+    atom[100].neutron = 157;
 
     strcpy(atom[101].name, "Nobelium");
     strcpy(atom[101].symbol, "No");
@@ -1660,6 +2171,11 @@ extern void table()
     atom[101].boilingpoint = 0;
     atom[101].electronegativity = 1.3;
     atom[101].electronaffinity = 0;
+    strcpy(atom[101].casnumber, "CAS10028-14-5");
+    strcpy(atom[101].electronshell, "K2 L8 M18 N32 O32 P8 Q2 R0");
+    atom[101].electron = 102;
+    atom[101].proton = 102;
+    atom[101].neutron = 157;
 
     strcpy(atom[102].name, "Lawrencium");
     strcpy(atom[102].symbol, "Lr");
@@ -1676,6 +2192,11 @@ extern void table()
     atom[102].boilingpoint = 0;
     atom[102].electronegativity = 0;
     atom[102].electronaffinity = 0;
+    strcpy(atom[102].casnumber, "CAS22537-19-5");
+    strcpy(atom[102].electronshell, "K2 L8 M18 N32 O32 P8 Q3 R0");
+    atom[102].electron = 103;
+    atom[102].proton = 103;
+    atom[102].neutron = 163;
 
     strcpy(atom[103].name, "Rutherfordium");
     strcpy(atom[103].symbol, "Rf");
@@ -1692,6 +2213,11 @@ extern void table()
     atom[103].boilingpoint = 5773.15;
     atom[103].electronegativity = 0;
     atom[103].electronaffinity = 0;
+    strcpy(atom[103].casnumber, "CAS53850-36-5");
+    strcpy(atom[103].electronshell, "K2 L8 M18 N32 O32 P10 Q2 R0");
+    atom[103].electron = 104;
+    atom[103].proton = 104;
+    atom[103].neutron = 157;
 
     strcpy(atom[104].name, "Dubnium");
     strcpy(atom[104].symbol, "Db");
@@ -1708,6 +2234,11 @@ extern void table()
     atom[104].boilingpoint = 0;
     atom[104].electronegativity = 0;
     atom[104].electronaffinity = 0;
+    strcpy(atom[104].casnumber, "CAS53850-35-4");
+    strcpy(atom[104].electronshell, "K2 L8 M18 N32 O32 P11 Q2 R0");
+    atom[104].electron = 105;
+    atom[104].proton = 105;
+    atom[104].neutron = 157;
 
     strcpy(atom[105].name, "Seaborgium");
     strcpy(atom[105].symbol, "Sg");
@@ -1724,6 +2255,11 @@ extern void table()
     atom[105].boilingpoint = 0;
     atom[105].electronegativity = 0;
     atom[105].electronaffinity = 0;
+    strcpy(atom[105].casnumber, "CAS54038-81-2");
+    strcpy(atom[105].electronshell, "K2 L8 M18 N32 O32 P12 Q2 R0");
+    atom[105].electron = 106;
+    atom[105].proton = 106;
+    atom[105].neutron = 106;
 
     strcpy(atom[106].name, "Bohrium");
     strcpy(atom[106].symbol, "Bh");
@@ -1740,6 +2276,11 @@ extern void table()
     atom[106].boilingpoint = 0;
     atom[106].electronegativity = 0;
     atom[106].electronaffinity = 0;
+    strcpy(atom[106].casnumber, "CAS54307-14-8");
+    strcpy(atom[106].electronshell, "K2 L8 M18 N32 O32 P13 Q2 R0");
+    atom[106].electron = 107;
+    atom[106].proton = 107;
+    atom[106].neutron = 160;
 
     strcpy(atom[107].name, "Hassium");
     strcpy(atom[107].symbol, "Hs");
@@ -1756,6 +2297,11 @@ extern void table()
     atom[107].boilingpoint = 0;
     atom[107].electronegativity = 0;
     atom[107].electronaffinity = 0;
+    strcpy(atom[107].casnumber, "CAS54037-57-9");
+    strcpy(atom[107].electronshell, "K2 L8 M18 N32 O32 P14 Q2 R0");
+    atom[107].electron = 108;
+    atom[107].proton = 108;
+    atom[107].neutron = 161;
 
     strcpy(atom[108].name, "Meinerium");
     strcpy(atom[108].symbol, "Mt");
@@ -1772,6 +2318,11 @@ extern void table()
     atom[108].boilingpoint = 0;
     atom[108].electronegativity = 0;
     atom[108].electronaffinity = 0;
+    strcpy(atom[108].casnumber, "CAS54038-01-6");
+    strcpy(atom[108].electronshell, "K2 L8 M18 N32 O32 P15 Q2 R0");
+    atom[108].electron = 109;
+    atom[108].proton = 109;
+    atom[108].neutron = 109;
 
     strcpy(atom[109].name, "Darmstadtium");
     strcpy(atom[109].symbol, "Ds");
@@ -1788,6 +2339,11 @@ extern void table()
     atom[109].boilingpoint = 0;
     atom[109].electronegativity = 0;
     atom[109].electronaffinity = 0;
+    strcpy(atom[109].casnumber, "CAS54083-77-1");
+    strcpy(atom[109].electronshell, "K2 L8 M18 N32 O32 P17 Q1 R0");
+    atom[109].electron = 110;
+    atom[109].proton = 110;
+    atom[109].neutron = 171;
 
     strcpy(atom[110].name, "Roentgenium");
     strcpy(atom[109].symbol, "Rg");
@@ -1804,6 +2360,11 @@ extern void table()
     atom[110].boilingpoint = 0;
     atom[110].electronegativity = 0;
     atom[110].electronaffinity = 0;
+    strcpy(atom[110].casnumber, "CAS54386-24-2");
+    strcpy(atom[110].electronshell, "K2 L8 M18 N32 O32 P18 Q1 R0");
+    atom[110].electron = 111;
+    atom[110].proton = 111;
+    atom[110].neutron = 171;
 
     strcpy(atom[111].name, "Copernicium");
     strcpy(atom[111].symbol, "Cn");
@@ -1820,6 +2381,11 @@ extern void table()
     atom[111].boilingpoint = 0;
     atom[111].electronegativity = 0;
     atom[111].electronaffinity = 0;
+    strcpy(atom[111].casnumber, "CAS54084-26-3");
+    strcpy(atom[111].electronshell, "K2 L8 M18 N32 O32 P18 Q7 R0");
+    atom[111].electron = 112;
+    atom[111].proton = 112;
+    atom[111].neutron = 173;
 
     strcpy(atom[112].name, "Nihonium");
     strcpy(atom[112].symbol, "Nh");
@@ -1836,6 +2402,11 @@ extern void table()
     atom[112].boilingpoint = 1428.15;
     atom[112].electronegativity = 0;
     atom[112].electronaffinity = 0;
+    strcpy(atom[112].casnumber, "CAS54084-70-7");
+    strcpy(atom[112].electronshell, "K2 L8 M18 N32 O32 P18 Q3 R0");
+    atom[112].electron = 113;
+    atom[112].proton = 113;
+    atom[112].neutron = 173;
 
     strcpy(atom[113].name, "Flerovium");
     strcpy(atom[113].symbol, "Fl");
@@ -1852,6 +2423,11 @@ extern void table()
     atom[113].boilingpoint = 419.15;
     atom[113].electronegativity = 0;
     atom[113].electronaffinity = 0;
+    strcpy(atom[113].casnumber, "CAS54085-16-4");
+    strcpy(atom[113].electronshell, "K2 L8 M18 N32 O32 P18 Q4 R0");
+    atom[113].electron = 114;
+    atom[113].proton = 114;
+    atom[113].neutron = 175;
 
     strcpy(atom[114].name, "Moscovium");
     strcpy(atom[114].symbol, "Mc");
@@ -1868,6 +2444,11 @@ extern void table()
     atom[114].boilingpoint = 0;
     atom[114].electronegativity = 0;
     atom[114].electronaffinity = 0;
+    strcpy(atom[114].casnumber, "CAS54085-64-2");
+    strcpy(atom[114].electronshell, "K2 L8 M18 N32 O32 P18 Q5 R0");
+    atom[114].electron = 115;
+    atom[114].proton = 115;
+    atom[114].neutron = 173;
 
     strcpy(atom[115].name, "Livermorium");
     strcpy(atom[115].symbol, "Lv");
@@ -1884,6 +2465,11 @@ extern void table()
     atom[115].boilingpoint = 0;
     atom[115].electronegativity = 0;
     atom[115].electronaffinity = 0;
+    strcpy(atom[115].casnumber, "CAS54100-71-9");
+    strcpy(atom[115].electronshell, "K2 L8 M18 N32 O32 P18 Q6 R0");
+    atom[115].electron = 116;
+    atom[115].proton = 116;
+    atom[115].neutron = 177;
 
     strcpy(atom[116].name, "Tennessine");
     strcpy(atom[116].symbol, "Ts");
@@ -1900,6 +2486,11 @@ extern void table()
     atom[116].boilingpoint = 0;
     atom[116].electronegativity = 0;
     atom[116].electronaffinity = 0;
+    strcpy(atom[116].casnumber, "CAS7658-56-8");
+    strcpy(atom[116].electronshell, "K2 L8 M18 N32 O32 P18 Q7 R0");
+    atom[116].electron = 117;
+    atom[116].proton = 117;
+    atom[116].neutron = 177;
 
     strcpy(atom[117].name, "Oganesson");
     strcpy(atom[117].symbol, "Og");
@@ -1916,4 +2507,9 @@ extern void table()
     atom[117].boilingpoint = 368.15;
     atom[117].electronegativity = 0;
     atom[117].electronaffinity = 0;
+    strcpy(atom[117].casnumber, "CAS54144-19-3");
+    strcpy(atom[117].electronshell, "K2 L8 M18 N32 O32 P18 Q8 R0");
+    atom[117].electron = 118;
+    atom[117].proton = 118;
+    atom[117].neutron = 176;
 }
