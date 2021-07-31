@@ -298,7 +298,7 @@ void search_by_atomicweight()
     scanf("%f", &atomic_weight);
     for (i = 0; i < 118; i++)
     {
-        if (atom[i].atomicwt == atomic_weight)
+        if ((atom[i].atomicwt == atomic_weight) || (round(atom[i].atomicwt) == round(atomic_weight)))
         {
             find = true;
             Result(i);
