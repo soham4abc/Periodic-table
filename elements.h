@@ -696,7 +696,7 @@ extern void table()
     strcpy(atom[31].group, "IVA");
     strcpy(atom[31].intgroup, "14");
     atom[31].period = 4;
-    atom[31].atomicradius = 122.5;
+    atom[31].atomicradius = 122;
     atom[31].meltingpoint = 1210.65;
     atom[31].boilingpoint = 3106.15;
     atom[31].electronegativity = 2.01;
