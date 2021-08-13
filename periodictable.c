@@ -38,8 +38,8 @@ char white_bg_black_font_underline[13] = "\033[0;30;47;4m";
 
 void ClearScreen()
 {
-    system("clear");
-    //system("@cls||clear");
+    //system("clear"); //For UNIX systems
+    system("@cls||clear");//for windows systems
 }
 
 void HomeScreen()
