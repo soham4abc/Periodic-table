@@ -1,12 +1,14 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 #include <stdbool.h>
 #include "elements.h"
 
 int i;
+int main();
+void search();
 char clear_colour[7] = "\033[0m";
 
 char red_bold[10] = "\033[1;31m";
@@ -36,7 +38,8 @@ char white_bg_black_font_underline[13] = "\033[0;30;47;4m";
 
 void ClearScreen()
 {
-    system("@cls||clear");
+    system("clear");
+    //system("@cls||clear");
 }
 
 void HomeScreen()
@@ -91,7 +94,11 @@ void quit()
 {
     HomeScreen();
     printf("%sAre you sure you want to quit [Y/N]? : %s", red_bold, clear_colour);
-    char response = getch();
+    char response;
+    fflush(stdin);
+    scanf("%c", &response);
+    printf("\n");
+
     if (tolower(response) == 'y')
     {
         printf("\n\n\n%sThank You%s\n\n", yellow_bold, clear_colour);
@@ -109,7 +116,11 @@ void quit()
 void again()
 {
     printf("\n\n\n%sSearch for a different element [Y/N]? : %s", yellow_bold, clear_colour);
-    char response = getch();
+    char response;
+    fflush(stdin);
+    scanf("%c", &response);
+    printf("\n");
+
     if (tolower(response) == 'y')
     {
         search();
@@ -128,7 +139,10 @@ void again()
 void again_mainmenu()
 {
     printf("\n\n\n%sReturn to Main Menu[Y/N]? : %s", yellow_bold, clear_colour);
-    char response = getch();
+    char response;
+    fflush(stdin);
+    scanf("%c", &response);
+
     if (tolower(response) == 'y')
     {
         main();
@@ -225,7 +239,7 @@ void search_by_name()
     element_name[0] = toupper(element_name[0]);
     for (i = 1; element_name[i] != '\0'; i++)
     {
-        element_name[i] = towlower(element_name[i]);
+        element_name[i] = tolower(element_name[i]);
     }
     for (i = 0; i < 118; i++)
     {
@@ -298,7 +312,7 @@ void search_by_atomicweight()
     scanf("%f", &atomic_weight);
     for (i = 0; i < 118; i++)
     {
-        if (atom[i].atomicwt == atomic_weight)
+        if ((atom[i].atomicwt == atomic_weight) || (round(atom[i].atomicwt) == round(atomic_weight)))
         {
             find = true;
             Result(i);
@@ -356,7 +370,9 @@ void search()
     printf("%s   < 5 > Period & Group No.%s\n\n", blue_bold, clear_colour);
     printf("%sPress < 0 > to return back to main menu.%s\n\n", red_bold, clear_colour);
     printf("%sYour Choice : %s", yellow_bold, clear_colour);
-    char response_Search = getch();
+    char response_Search;
+    fflush(stdin);
+    scanf("%c", &response_Search);
 
     switch (response_Search)
     {
@@ -393,7 +409,10 @@ int main()
     printf("    %s< 3 > Modern Periodic Table%s\n", blue_bold, clear_colour);
     printf("    %s< 4 > Quit%s\n\n", blue_bold, clear_colour);
     printf("%sYour Choice : %s", yellow_bold, clear_colour);
-    char response_HomeScreen = getch();
+    char response_HomeScreen;
+    fflush(stdin);
+    scanf("%c", &response_HomeScreen);
+
     table();
     switch (response_HomeScreen)
     {
