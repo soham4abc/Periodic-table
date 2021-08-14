@@ -9,13 +9,13 @@ A C Programming Project used for
 
 ## Screenshots:
 ### Home Screen
-<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%20HomeScreen.png" width="700"/>
+<img src="https://github.com/soham4abc/Periodic-table/blob/master/Screenshot/SS%20HomeScreen.png" width="700"/>
 
 ### Search Element
-<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%20Elements.png" width="700"/>
+<img src="https://github.com/soham4abc/Periodic-table/blob/master/Screenshot/SS%20Elements.png" width="700"/>
 
 ### Mendeleev's Periodic Table
-<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%20Mendeleev.png" width="600"/>
+<img src="https://github.com/soham4abc/Periodic-table/blob/master/Screenshot/SS%20Mendeleev.png" width="600"/>
 
 ### Modern Periodic Table
-<img src="https://github.com/belelaritra/Periodic-table/blob/master/Screenshot/SS%20Modern.png" width="700"/>
+<img src="https://github.com/soham4abc/Periodic-table/blob/master/Screenshot/SS%20Modern.png" width="700"/>
